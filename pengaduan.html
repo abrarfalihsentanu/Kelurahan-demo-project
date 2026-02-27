@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pengaduan Masyarakat – Kelurahan Petamburan</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- Primary CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<div class="a11y-widget" id="a11yWidget">
+  <button class="a11y-toggle" id="a11yToggle" aria-label="Buka Menu Aksesibilitas" title="Menu Aksesibilitas (CTRL+U)">
+    <i class="fa fa-universal-access"></i>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yTitle" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3 id="a11yTitle"><i class="fa fa-universal-access"></i> Menu Aksesibilitas (CTRL+U)</h3>
+      <button class="a11y-close" id="a11yClose" aria-label="Tutup Menu"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="a11y-lang"><i class="fa fa-globe"></i> Bahasa Indonesia (Indonesian)</div>
+    <div class="a11y-grid">
+      <button class="a11y-btn" data-action="speech" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-volume-up"></i></div><span>Mode Suara</span></button>
+      <button class="a11y-btn" data-action="font-increase" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;">T</span><span style="font-size:24px;font-weight:700;">T</span></div><span>Perbesar Teks</span></button>
+      <button class="a11y-btn" data-action="font-decrease" aria-pressed="false"><div class="a11y-icon"><span style="font-size:24px;font-weight:700;">T</span><span style="font-size:18px;font-weight:700;">T</span></div><span>Perkecil Teks</span></button>
+      <button class="a11y-btn" data-action="grayscale" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-tint"></i></div><span>Skala Abu-Abu</span></button>
+      <button class="a11y-btn" data-action="contrast" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-adjust"></i></div><span>Kontras+</span></button>
+      <button class="a11y-btn" data-action="hide-images" aria-pressed="false"><div class="a11y-icon" style="position:relative;"><i class="fa fa-image"></i><i class="fa fa-ban" style="position:absolute;font-size:28px;opacity:.7;"></i></div><span>Sembunyikan Gambar</span></button>
+      <button class="a11y-btn" data-action="text-align" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-align-justify"></i></div><span>Rata Tulisan</span></button>
+      <button class="a11y-btn" data-action="dyslexia" aria-pressed="false"><div class="a11y-icon"><span style="font-size:28px;font-weight:700;">A</span></div><span>Tulisan Dapat Dibaca</span></button>
+      <button class="a11y-btn" data-action="line-height" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-text-height"></i></div><span>Tinggi Garis</span></button>
+      <button class="a11y-btn" data-action="pause-animation" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-hourglass-half"></i></div><span>Animasi Dijeda</span></button>
+      <button class="a11y-btn" data-action="big-cursor" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-mouse-pointer"></i></div><span>Kursor</span></button>
+      <button class="a11y-btn" data-action="letter-spacing" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;letter-spacing:6px;">T T</span></div><span>Spasi Teks</span></button>
+      <button class="a11y-btn" data-action="underline-links" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-underline"></i></div><span>Garis Bawahi Tautan</span></button>
+      <button class="a11y-btn a11y-reset" data-action="reset"><div class="a11y-icon"><i class="fa fa-undo"></i></div><span>Reset Semua</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="fa fa-clock"></i> Jam Layanan: Senin–Jumat, 08.00–16.00 WIB</span>
+      <span><i class="fa fa-phone"></i> (021) 5303540</span>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-header-btn" id="a11yHeaderBtn" title="Menu Aksesibilitas (CTRL+U)" aria-label="Buka Menu Aksesibilitas">
+        <i class="fa fa-universal-access"></i>
+      </button>
+      <span id="clock-date"></span>
+      <a href="#" class="lang active">ID</a>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="assets/img/logo-dki.svg" alt="Logo DKI" class="logo-dki"/>
+      <div class="brand-text">
+        <span class="brand-sub">Pemerintah Provinsi DKI Jakarta</span>
+        <span class="brand-name">Kelurahan Petamburan</span>
+        <span class="brand-info">Kecamatan Tanah Abang · Jakarta Pusat</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="has-dropdown">
+          <a href="#">Perangkat <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="perangkat.html">Struktur Organisasi</a></li>
+            <li><a href="perangkat.html#pejabat">Daftar Pejabat</a></li>
+            <li><a href="perangkat.html#tugas">Tugas dan Fungsi</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Layanan <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="layanan.html">Maklumat Layanan</a></li>
+            <li><a href="layanan.html#jenis">Jenis Pelayanan</a></li>
+            <li><a href="layanan.html#jam">Jam Pelayanan</a></li>
+            <li><a href="layanan.html#ikm">Nilai IKM</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Informasi <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="informasi.html">Agenda Kelurahan</a></li>
+            <li><a href="informasi.html#prestasi">Prestasi</a></li>
+            <li><a href="informasi.html#infografis">Infografis</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="pengaduan.html"><i class="fa fa-bullhorn"></i> Pengaduan</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="page-banner-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>Pengaduan Masyarakat</span>
+    </div>
+    <h1><i class="fa fa-bullhorn"></i> Pengaduan Masyarakat</h1>
+    <p>Sampaikan keluhan, aspirasi, dan pengaduan Anda secara langsung kepada Kelurahan Petamburan. Setiap laporan akan ditindaklanjuti secara transparan.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <!-- ALUR PENGADUAN -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Prosedur</span>
+          <h2 class="section-title">Alur Pengaduan</h2>
+        </div>
+      </div>
+      <div class="pengaduan-alur">
+        <div class="alur-step">
+          <div class="alur-icon"><i class="fa fa-edit"></i></div>
+          <div class="alur-num">1</div>
+          <h4>Isi Formulir</h4>
+          <p>Lengkapi formulir pengaduan dengan data diri dan detail keluhan Anda</p>
+        </div>
+        <div class="alur-arrow"><i class="fa fa-chevron-right"></i></div>
+        <div class="alur-step">
+          <div class="alur-icon"><i class="fa fa-check-circle"></i></div>
+          <div class="alur-num">2</div>
+          <h4>Verifikasi</h4>
+          <p>Tim kelurahan memverifikasi dan mengkategorikan laporan Anda</p>
+        </div>
+        <div class="alur-arrow"><i class="fa fa-chevron-right"></i></div>
+        <div class="alur-step">
+          <div class="alur-icon"><i class="fa fa-cogs"></i></div>
+          <div class="alur-num">3</div>
+          <h4>Proses</h4>
+          <p>Pengaduan ditindaklanjuti oleh seksi/unit terkait</p>
+        </div>
+        <div class="alur-arrow"><i class="fa fa-chevron-right"></i></div>
+        <div class="alur-step">
+          <div class="alur-icon"><i class="fa fa-reply"></i></div>
+          <div class="alur-num">4</div>
+          <h4>Tanggapan</h4>
+          <p>Anda menerima tanggapan resmi maksimal 5 hari kerja</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTIK PENGADUAN -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Statistik</span>
+          <h2 class="section-title">Rekapitulasi Pengaduan 2026</h2>
+        </div>
+      </div>
+      <div class="pengaduan-stats-grid">
+        <div class="pengaduan-stat-card">
+          <div class="pengaduan-stat-icon" style="background:linear-gradient(135deg,#2196F3,#42A5F5);">
+            <i class="fa fa-inbox"></i>
+          </div>
+          <div class="pengaduan-stat-num">156</div>
+          <div class="pengaduan-stat-label">Total Pengaduan Masuk</div>
+        </div>
+        <div class="pengaduan-stat-card">
+          <div class="pengaduan-stat-icon" style="background:linear-gradient(135deg,#FF9800,#FFB74D);">
+            <i class="fa fa-spinner"></i>
+          </div>
+          <div class="pengaduan-stat-num">12</div>
+          <div class="pengaduan-stat-label">Sedang Diproses</div>
+        </div>
+        <div class="pengaduan-stat-card">
+          <div class="pengaduan-stat-icon" style="background:linear-gradient(135deg,#4CAF50,#66BB6A);">
+            <i class="fa fa-check-double"></i>
+          </div>
+          <div class="pengaduan-stat-num">138</div>
+          <div class="pengaduan-stat-label">Telah Ditindaklanjuti</div>
+        </div>
+        <div class="pengaduan-stat-card">
+          <div class="pengaduan-stat-icon" style="background:linear-gradient(135deg,var(--red),var(--orange));">
+            <i class="fa fa-percentage"></i>
+          </div>
+          <div class="pengaduan-stat-num">88,5%</div>
+          <div class="pengaduan-stat-label">Tingkat Penyelesaian</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM PENGADUAN -->
+    <section class="section-block" id="form-pengaduan">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Online</span>
+          <h2 class="section-title">Formulir Pengaduan</h2>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-card-header">
+          <h3><i class="fa fa-bullhorn"></i> Sampaikan Pengaduan Anda</h3>
+          <p>Isi formulir di bawah ini dengan lengkap dan jelas. Pengaduan Anda akan diproses dalam waktu maksimal 5 (lima) hari kerja.</p>
+        </div>
+        <div class="form-body">
+          <form class="ppid-form" id="formPengaduan">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nama Lengkap <span style="color:var(--red)">*</span></label>
+                <input type="text" placeholder="Masukkan nama lengkap sesuai KTP" required/>
+              </div>
+              <div class="form-group">
+                <label>NIK (Nomor Induk Kependudukan) <span style="color:var(--red)">*</span></label>
+                <input type="text" placeholder="16 digit NIK" maxlength="16" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>No. Telepon / WhatsApp <span style="color:var(--red)">*</span></label>
+                <input type="tel" placeholder="0812-xxxx-xxxx" required/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="email@contoh.com"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Alamat Lengkap <span style="color:var(--red)">*</span></label>
+                <input type="text" placeholder="RT/RW, Kelurahan, Kecamatan" required/>
+              </div>
+              <div class="form-group">
+                <label>Kategori Pengaduan <span style="color:var(--red)">*</span></label>
+                <select required>
+                  <option value="">-- Pilih Kategori --</option>
+                  <option>Infrastruktur & Fasilitas Umum</option>
+                  <option>Kebersihan & Lingkungan</option>
+                  <option>Keamanan & Ketertiban</option>
+                  <option>Pelayanan Administrasi</option>
+                  <option>Bantuan Sosial</option>
+                  <option>Kependudukan</option>
+                  <option>Banjir & Bencana</option>
+                  <option>Perizinan</option>
+                  <option>Lainnya</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Lokasi Kejadian <span style="color:var(--red)">*</span></label>
+                <input type="text" placeholder="Contoh: Jl. KS Tubun, depan Gang Masjid RT 05/03" required/>
+              </div>
+              <div class="form-group">
+                <label>Tanggal Kejadian</label>
+                <input type="date"/>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label>Judul Pengaduan <span style="color:var(--red)">*</span></label>
+              <input type="text" placeholder="Ringkasan singkat pengaduan Anda" required/>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label>Uraian Pengaduan <span style="color:var(--red)">*</span></label>
+              <textarea placeholder="Jelaskan secara detail kronologi, dampak, dan harapan Anda terkait pengaduan ini..." required style="min-height:150px;"></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom:24px;">
+              <label>Lampiran Bukti (Foto / Dokumen)</label>
+              <input type="file" multiple accept="image/*,.pdf,.doc,.docx" style="padding:10px;background:var(--gray-100);border:1.5px dashed var(--gray-300);border-radius:8px;"/>
+              <small style="font-size:12px;color:var(--gray-500);margin-top:4px;">Maks. 5 file, masing-masing maks. 5MB (JPG, PNG, PDF)</small>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:20px;">
+              <input type="checkbox" required style="width:18px;height:18px;accent-color:var(--red);margin-top:2px;flex-shrink:0;"/>
+              <label style="font-size:13.5px;color:var(--gray-700);line-height:1.5;">Saya menyatakan bahwa pengaduan yang disampaikan adalah benar berdasarkan fakta. Saya bersedia bertanggung jawab atas isi pengaduan ini dan data saya digunakan untuk keperluan tindak lanjut oleh Kelurahan Petamburan.</label>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fa fa-paper-plane"></i> Kirim Pengaduan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEK STATUS PENGADUAN -->
+    <section class="section-block" id="cek-status">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Lacak</span>
+          <h2 class="section-title">Cek Status Pengaduan</h2>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-card-header" style="background:linear-gradient(90deg,#1565C0,#42A5F5);">
+          <h3><i class="fa fa-search"></i> Lacak Status Pengaduan Anda</h3>
+          <p>Masukkan nomor tiket pengaduan yang Anda terima untuk melihat status tindak lanjut</p>
+        </div>
+        <div class="form-body">
+          <form class="ppid-form" id="formCekStatus" style="max-width:500px;">
+            <div class="form-group" style="margin-bottom:18px;">
+              <label>Nomor Tiket Pengaduan <span style="color:var(--red)">*</span></label>
+              <input type="text" id="inputTiket" placeholder="Contoh: ADU-2026-00142" required/>
+            </div>
+            <button type="submit" class="btn-submit" style="background:linear-gradient(90deg,#1565C0,#42A5F5);">
+              <i class="fa fa-search"></i> Cek Status
+            </button>
+          </form>
+
+          <!-- DEMO: Hasil Tracking (hidden by default, shown via JS) -->
+          <div id="hasilTracking" style="display:none;margin-top:28px;">
+            <div style="background:var(--gray-100);border-radius:var(--radius-lg);padding:24px;border:1.5px solid var(--gray-200);">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
+                <div>
+                  <div style="font-size:12px;color:var(--gray-500);font-weight:600;text-transform:uppercase;letter-spacing:.04em;">Nomor Tiket</div>
+                  <div style="font-size:18px;font-weight:800;color:var(--gray-900);" id="trackTiketNo">ADU-2026-00142</div>
+                </div>
+                <span class="pengaduan-status-badge status-proses"><i class="fa fa-spinner fa-spin"></i> Sedang Diproses</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
+                <div style="background:#fff;padding:12px 16px;border-radius:8px;">
+                  <div style="font-size:11.5px;color:var(--gray-500);font-weight:600;">Kategori</div>
+                  <div style="font-size:14px;font-weight:700;color:var(--gray-900);">Infrastruktur & Fasilitas Umum</div>
+                </div>
+                <div style="background:#fff;padding:12px 16px;border-radius:8px;">
+                  <div style="font-size:11.5px;color:var(--gray-500);font-weight:600;">Tanggal Pengaduan</div>
+                  <div style="font-size:14px;font-weight:700;color:var(--gray-900);">18 Februari 2026</div>
+                </div>
+                <div style="background:#fff;padding:12px 16px;border-radius:8px;">
+                  <div style="font-size:11.5px;color:var(--gray-500);font-weight:600;">Unit Penanganan</div>
+                  <div style="font-size:14px;font-weight:700;color:var(--gray-900);">Kasi Ekbang</div>
+                </div>
+                <div style="background:#fff;padding:12px 16px;border-radius:8px;">
+                  <div style="font-size:11.5px;color:var(--gray-500);font-weight:600;">Estimasi Selesai</div>
+                  <div style="font-size:14px;font-weight:700;color:var(--orange);">25 Februari 2026</div>
+                </div>
+              </div>
+              <!-- Timeline -->
+              <div style="font-size:13px;font-weight:700;color:var(--gray-900);margin-bottom:14px;">Riwayat Status:</div>
+              <div class="tracking-timeline">
+                <div class="timeline-item done">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-date">18 Feb 2026, 09:15 WIB</div>
+                    <div class="timeline-text">Pengaduan diterima dan tercatat dalam sistem</div>
+                  </div>
+                </div>
+                <div class="timeline-item done">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-date">18 Feb 2026, 14:30 WIB</div>
+                    <div class="timeline-text">Verifikasi data selesai – diteruskan ke Kasi Ekbang</div>
+                  </div>
+                </div>
+                <div class="timeline-item active">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-date">19 Feb 2026, 10:00 WIB</div>
+                    <div class="timeline-text">Peninjauan lokasi oleh petugas – proses tindak lanjut</div>
+                  </div>
+                </div>
+                <div class="timeline-item pending">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <div class="timeline-date">Menunggu</div>
+                    <div class="timeline-text">Tanggapan resmi & penyelesaian</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PENGADUAN TERBARU (Transparansi) -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Transparan</span>
+          <h2 class="section-title">Pengaduan Terbaru</h2>
+        </div>
+      </div>
+      <div class="pengaduan-list-table">
+        <table>
+          <thead>
+            <tr>
+              <th>No. Tiket</th>
+              <th>Tanggal</th>
+              <th>Kategori</th>
+              <th>Judul</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ADU-2026-00156</strong></td>
+              <td>21 Feb 2026</td>
+              <td><span class="cat-badge cat-kebersihan">Kebersihan</span></td>
+              <td>Penumpukan sampah di gang RT 08/04</td>
+              <td><span class="pengaduan-status-badge status-baru">Baru</span></td>
+            </tr>
+            <tr>
+              <td><strong>ADU-2026-00155</strong></td>
+              <td>20 Feb 2026</td>
+              <td><span class="cat-badge cat-infrastruktur">Infrastruktur</span></td>
+              <td>Jalan berlubang di Jl. KS Tubun Gg. 5</td>
+              <td><span class="pengaduan-status-badge status-proses">Diproses</span></td>
+            </tr>
+            <tr>
+              <td><strong>ADU-2026-00154</strong></td>
+              <td>19 Feb 2026</td>
+              <td><span class="cat-badge cat-keamanan">Keamanan</span></td>
+              <td>Lampu jalan mati di RT 03/02</td>
+              <td><span class="pengaduan-status-badge status-proses">Diproses</span></td>
+            </tr>
+            <tr>
+              <td><strong>ADU-2026-00153</strong></td>
+              <td>18 Feb 2026</td>
+              <td><span class="cat-badge cat-infrastruktur">Infrastruktur</span></td>
+              <td>Saluran air tersumbat di RT 05/03</td>
+              <td><span class="pengaduan-status-badge status-proses">Diproses</span></td>
+            </tr>
+            <tr>
+              <td><strong>ADU-2026-00152</strong></td>
+              <td>17 Feb 2026</td>
+              <td><span class="cat-badge cat-pelayanan">Pelayanan</span></td>
+              <td>Pengurusan surat domisili terlalu lama</td>
+              <td><span class="pengaduan-status-badge status-selesai">Selesai</span></td>
+            </tr>
+            <tr>
+              <td><strong>ADU-2026-00151</strong></td>
+              <td>16 Feb 2026</td>
+              <td><span class="cat-badge cat-kebersihan">Kebersihan</span></td>
+              <td>Drainase tersumbat di depan SD 05 Petamburan</td>
+              <td><span class="pengaduan-status-badge status-selesai">Selesai</span></td>
+            </tr>
+            <tr>
+              <td><strong>ADU-2026-00150</strong></td>
+              <td>15 Feb 2026</td>
+              <td><span class="cat-badge cat-sosial">Bansos</span></td>
+              <td>Data penerima bansos belum diperbarui</td>
+              <td><span class="pengaduan-status-badge status-selesai">Selesai</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ PENGADUAN -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">Pertanyaan Umum Pengaduan</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Bagaimana cara menyampaikan pengaduan?</span>
+            <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Anda dapat menyampaikan pengaduan melalui:</p>
+            <ul>
+              <li>Formulir online di halaman ini</li>
+              <li>Datang langsung ke loket pengaduan Kelurahan Petamburan</li>
+              <li>WhatsApp ke nomor 0812-1234-5678</li>
+              <li>Email ke kel.petamburan@jakarta.go.id</li>
+            </ul>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Berapa lama pengaduan saya akan ditanggapi?</span>
+            <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Setiap pengaduan akan diterima dan diverifikasi dalam 1×24 jam. Tindak lanjut serta tanggapan resmi diberikan maksimal 5 (lima) hari kerja sejak pengaduan diterima.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Apakah identitas pelapor dijaga kerahasiaannya?</span>
+            <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ya. Sesuai dengan ketentuan yang berlaku, identitas pelapor bersifat <strong>rahasia</strong> dan tidak akan dipublikasikan. Data pribadi hanya digunakan untuk keperluan verifikasi dan tindak lanjut pengaduan.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Apakah saya bisa melacak status pengaduan?</span>
+            <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Bisa. Setelah mengirim pengaduan, Anda akan menerima <strong>nomor tiket</strong> pengaduan. Gunakan nomor tersebut pada fitur "Cek Status Pengaduan" di halaman ini untuk melacak perkembangan penanganan.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            <span>Apa saja kategori pengaduan yang bisa dilaporkan?</span>
+            <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Pengaduan dapat mencakup berbagai aspek layanan kelurahan, antara lain:</p>
+            <ul>
+              <li><strong>Infrastruktur</strong> – jalan rusak, saluran air, fasilitas umum</li>
+              <li><strong>Kebersihan</strong> – sampah, limbah, drainase</li>
+              <li><strong>Keamanan</strong> – ketertiban, penerangan jalan</li>
+              <li><strong>Pelayanan</strong> – kualitas dan kecepatan layanan administrasi</li>
+              <li><strong>Bantuan Sosial</strong> – data penerima, penyaluran bantuan</li>
+              <li><strong>Lainnya</strong> – pengaduan di luar kategori di atas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.main-content -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <!-- Quick Links Pengaduan -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-bolt"></i> Akses Cepat</div>
+      <div style="padding:14px 18px;display:flex;flex-direction:column;gap:10px;">
+        <a href="#form-pengaduan" style="display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--red),var(--orange));color:#fff;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13.5px;text-decoration:none;transition:opacity .25s;" onmouseover="this.style.opacity='.9'" onmouseout="this.style.opacity='1'">
+          <i class="fa fa-plus-circle"></i> Buat Pengaduan Baru
+        </a>
+        <a href="#cek-status" style="display:flex;align-items:center;gap:10px;background:#1565C0;color:#fff;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13.5px;text-decoration:none;transition:opacity .25s;" onmouseover="this.style.opacity='.9'" onmouseout="this.style.opacity='1'">
+          <i class="fa fa-search"></i> Lacak Status Pengaduan
+        </a>
+        <a href="kontak.html" style="display:flex;align-items:center;gap:10px;background:var(--gray-700);color:#fff;padding:12px 16px;border-radius:8px;font-weight:700;font-size:13.5px;text-decoration:none;transition:opacity .25s;" onmouseover="this.style.opacity='.9'" onmouseout="this.style.opacity='1'">
+          <i class="fa fa-phone-alt"></i> Hubungi Kami Langsung
+        </a>
+      </div>
+    </div>
+
+    <!-- Kategori Pengaduan -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-tags"></i> Kategori Pengaduan</div>
+      <div style="padding:14px 18px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;background:var(--gray-100);font-size:13px;">
+            <span><i class="fa fa-road" style="color:var(--orange);width:18px;"></i> Infrastruktur</span>
+            <span style="background:var(--orange);color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;">42</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;background:var(--gray-100);font-size:13px;">
+            <span><i class="fa fa-trash" style="color:#27AE60;width:18px;"></i> Kebersihan</span>
+            <span style="background:#27AE60;color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;">38</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;background:var(--gray-100);font-size:13px;">
+            <span><i class="fa fa-shield-alt" style="color:#2196F3;width:18px;"></i> Keamanan</span>
+            <span style="background:#2196F3;color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;">28</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;background:var(--gray-100);font-size:13px;">
+            <span><i class="fa fa-concierge-bell" style="color:var(--red);width:18px;"></i> Pelayanan</span>
+            <span style="background:var(--red);color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;">24</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;background:var(--gray-100);font-size:13px;">
+            <span><i class="fa fa-hand-holding-heart" style="color:#8E44AD;width:18px;"></i> Bantuan Sosial</span>
+            <span style="background:#8E44AD;color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;">16</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:6px;background:var(--gray-100);font-size:13px;">
+            <span><i class="fa fa-ellipsis-h" style="color:var(--gray-500);width:18px;"></i> Lainnya</span>
+            <span style="background:var(--gray-500);color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;">8</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Penting -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-info-circle"></i> Informasi Penting</div>
+      <div style="padding:18px;font-size:13px;color:var(--gray-700);line-height:1.7;">
+        <div style="background:#FFEBEE;border-left:3px solid var(--red);padding:12px;border-radius:0 8px 8px 0;margin-bottom:12px;">
+          <strong style="color:var(--red);font-size:12.5px;">⚠️ Peringatan</strong>
+          <p style="font-size:12.5px;margin-top:4px;">Pengaduan yang bersifat <strong>fitnah, SARA, atau mengandung ancaman</strong> tidak akan diproses dan dapat dikenakan sanksi hukum.</p>
+        </div>
+        <div style="background:#E8F5E9;border-left:3px solid #27AE60;padding:12px;border-radius:0 8px 8px 0;">
+          <strong style="color:#27AE60;font-size:12.5px;">✅ Tips</strong>
+          <p style="font-size:12.5px;margin-top:4px;">Sertakan foto/bukti pendukung agar pengaduan dapat diproses lebih cepat dan akurat.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontak Darurat -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-phone-alt"></i> Kontak Pengaduan</div>
+      <div class="kontak-list">
+        <div class="kontak-item"><i class="fa fa-phone"></i><span>(021) 5303540 ext. 103</span></div>
+        <div class="kontak-item"><i class="fab fa-whatsapp"></i><span>0812-1234-5678</span></div>
+        <div class="kontak-item"><i class="fa fa-envelope"></i><span>pengaduan.petamburan@jakarta.go.id</span></div>
+        <div class="kontak-item"><i class="fa fa-clock"></i><span>Senin–Jumat, 08.00–16.00 WIB</span></div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- PPID BANNER -->
+<section class="ppid-banner">
+  <div class="ppid-banner-inner">
+    <div class="ppid-banner-text">
+      <i class="fa fa-shield-alt"></i>
+      <div>
+        <h3>Keterbukaan Informasi Publik (PPID)</h3>
+        <p>Ajukan permohonan informasi atau keberatan secara online</p>
+      </div>
+    </div>
+    <div class="ppid-banner-actions">
+      <a href="ppid.html" class="btn-ppid primary">Form Permohonan</a>
+      <a href="ppid.html#form-keberatan" class="btn-ppid secondary">Form Keberatan</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col brand">
+      <div class="footer-brand">
+        <div class="footer-brand-text">
+          <strong>Kelurahan Petamburan</strong>
+          <span>Kecamatan Tanah Abang, Jakarta Pusat</span>
+        </div>
+      </div>
+      <p class="footer-desc">Melayani masyarakat dengan sepenuh hati, transparan, akuntabel, dan berintegritas.</p>
+      <div class="footer-sosmed">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="layanan.html">Pengantar KTP</a></li>
+        <li><a href="layanan.html">Kartu Keluarga</a></li>
+        <li><a href="layanan.html">Surat Domisili</a></li>
+        <li><a href="pengaduan.html">Pengaduan</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="perangkat.html">Perangkat</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <div class="footer-kontak">
+        <p><i class="fa fa-map-marker-alt"></i> Jl. KS Tubun No.1, Jakarta Pusat</p>
+        <p><i class="fa fa-phone"></i> (021) 5303540</p>
+        <p><i class="fa fa-envelope"></i> kel.petamburan@jakarta.go.id</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kelurahan Petamburan – Pemerintah Provinsi DKI Jakarta</span>
+    <span>Dibangun oleh Tim IT Pemprov DKI Jakarta</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informasi – Kelurahan Petamburan</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- Primary CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<div class="a11y-widget" id="a11yWidget">
+  <button class="a11y-toggle" id="a11yToggle" aria-label="Buka Menu Aksesibilitas" title="Menu Aksesibilitas (CTRL+U)">
+    <i class="fa fa-universal-access"></i>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yTitle" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3 id="a11yTitle"><i class="fa fa-universal-access"></i> Menu Aksesibilitas (CTRL+U)</h3>
+      <button class="a11y-close" id="a11yClose" aria-label="Tutup Menu"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="a11y-lang"><i class="fa fa-globe"></i> Bahasa Indonesia (Indonesian)</div>
+    <div class="a11y-grid">
+      <button class="a11y-btn" data-action="speech" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-volume-up"></i></div><span>Mode Suara</span></button>
+      <button class="a11y-btn" data-action="font-increase" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;">T</span><span style="font-size:24px;font-weight:700;">T</span></div><span>Perbesar Teks</span></button>
+      <button class="a11y-btn" data-action="font-decrease" aria-pressed="false"><div class="a11y-icon"><span style="font-size:24px;font-weight:700;">T</span><span style="font-size:18px;font-weight:700;">T</span></div><span>Perkecil Teks</span></button>
+      <button class="a11y-btn" data-action="grayscale" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-tint"></i></div><span>Skala Abu-Abu</span></button>
+      <button class="a11y-btn" data-action="contrast" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-adjust"></i></div><span>Kontras+</span></button>
+      <button class="a11y-btn" data-action="hide-images" aria-pressed="false"><div class="a11y-icon" style="position:relative;"><i class="fa fa-image"></i><i class="fa fa-ban" style="position:absolute;font-size:28px;opacity:.7;"></i></div><span>Sembunyikan Gambar</span></button>
+      <button class="a11y-btn" data-action="text-align" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-align-justify"></i></div><span>Rata Tulisan</span></button>
+      <button class="a11y-btn" data-action="dyslexia" aria-pressed="false"><div class="a11y-icon"><span style="font-size:28px;font-weight:700;">A</span></div><span>Tulisan Dapat Dibaca</span></button>
+      <button class="a11y-btn" data-action="line-height" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-text-height"></i></div><span>Tinggi Garis</span></button>
+      <button class="a11y-btn" data-action="pause-animation" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-hourglass-half"></i></div><span>Animasi Dijeda</span></button>
+      <button class="a11y-btn" data-action="big-cursor" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-mouse-pointer"></i></div><span>Kursor</span></button>
+      <button class="a11y-btn" data-action="letter-spacing" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;letter-spacing:6px;">T T</span></div><span>Spasi Teks</span></button>
+      <button class="a11y-btn" data-action="underline-links" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-underline"></i></div><span>Garis Bawahi Tautan</span></button>
+      <button class="a11y-btn a11y-reset" data-action="reset"><div class="a11y-icon"><i class="fa fa-undo"></i></div><span>Reset Semua</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="fa fa-clock"></i> Jam Layanan: Senin–Jumat, 08.00–16.00 WIB</span>
+      <span><i class="fa fa-phone"></i> (021) 5303540</span>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-header-btn" id="a11yHeaderBtn" title="Menu Aksesibilitas (CTRL+U)" aria-label="Buka Menu Aksesibilitas">
+        <i class="fa fa-universal-access"></i>
+      </button>
+      <span id="clock-date"></span>
+      <a href="#" class="lang active">ID</a>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="assets/img/logo-dki.svg" alt="Logo DKI" class="logo-dki"/>
+      <div class="brand-text">
+        <span class="brand-sub">Pemerintah Provinsi DKI Jakarta</span>
+        <span class="brand-name">Kelurahan Petamburan</span>
+        <span class="brand-info">Kecamatan Tanah Abang · Jakarta Pusat</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="has-dropdown">
+          <a href="#">Perangkat <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="perangkat.html">Struktur Organisasi</a></li>
+            <li><a href="perangkat.html#pejabat">Daftar Pejabat</a></li>
+            <li><a href="perangkat.html#tugas">Tugas dan Fungsi</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Layanan <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="layanan.html">Maklumat Layanan</a></li>
+            <li><a href="layanan.html#jenis">Jenis Pelayanan</a></li>
+            <li><a href="layanan.html#jam">Jam Pelayanan</a></li>
+            <li><a href="layanan.html#ikm">Nilai IKM</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown active">
+          <a href="#">Informasi <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="informasi.html">Agenda Kelurahan</a></li>
+            <li><a href="informasi.html#prestasi">Prestasi</a></li>
+            <li><a href="informasi.html#infografis">Infografis</a></li>
+            <li><a href="informasi.html#potensi">Potensi Kelurahan</a></li>
+          </ul>
+        </li>
+        <li><a href="pengaduan.html"><i class="fa fa-bullhorn"></i> Pengaduan</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="page-banner-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>Informasi</span>
+    </div>
+    <h1><i class="fa fa-newspaper"></i> Informasi Kelurahan</h1>
+    <p>Agenda kegiatan, prestasi, infografis data, dan potensi wilayah Kelurahan Petamburan untuk masyarakat.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <!-- ==================== AGENDA KELURAHAN ==================== -->
+    <section class="section-block" id="agenda">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Jadwal</span>
+          <h2 class="section-title">Agenda Kelurahan</h2>
+        </div>
+      </div>
+
+      <!-- Filter Bulan -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;">
+        <span class="info-filter-btn active">Semua</span>
+        <span class="info-filter-btn">Februari 2026</span>
+        <span class="info-filter-btn">Maret 2026</span>
+        <span class="info-filter-btn">April 2026</span>
+      </div>
+
+      <div class="agenda-list">
+        <!-- Agenda 1 -->
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">25</span>
+            <span class="agenda-month">Feb</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Rapat Koordinasi Perangkat Kelurahan</h4>
+            <p><i class="fa fa-clock"></i> 09.00 – 11.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Aula Kelurahan Petamburan</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Pembahasan evaluasi program kerja bulan Januari–Februari dan penyusunan rencana kegiatan bulan Maret 2026.</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <!-- Agenda 2 -->
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">27</span>
+            <span class="agenda-month">Feb</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Posyandu Balita RW 03 & RW 07</h4>
+            <p><i class="fa fa-clock"></i> 08.00 – 12.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Pos Kesehatan RW 03</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Penimbangan balita, pemberian imunisasi, dan konsultasi gizi bersama Puskesmas Petamburan.</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <!-- Agenda 3 -->
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">05</span>
+            <span class="agenda-month">Mar</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Sosialisasi Program Bantuan Sosial 2026</h4>
+            <p><i class="fa fa-clock"></i> 13.00 – 15.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Balai Warga RW 05</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Penjelasan mekanisme penyaluran bantuan sosial tahun 2026, verifikasi data penerima, dan tanya jawab dengan warga.</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <!-- Agenda 4 -->
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">10</span>
+            <span class="agenda-month">Mar</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Kegiatan Jumat Bersih – Gotong Royong Warga</h4>
+            <p><i class="fa fa-clock"></i> 07.00 – 09.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Seluruh Wilayah RT/RW</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Program rutin kebersihan lingkungan bersama perangkat kelurahan, tiga pilar, dan seluruh warga.</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <!-- Agenda 5 -->
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">14</span>
+            <span class="agenda-month">Mar</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Pelatihan Kewirausahaan UMKM Petamburan</h4>
+            <p><i class="fa fa-clock"></i> 09.00 – 14.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Aula Kelurahan Petamburan</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Pelatihan pemasaran digital dan pengelolaan keuangan untuk pelaku UMKM di wilayah Petamburan bekerja sama dengan Dinas PPKUKM.</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <!-- Agenda 6 -->
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">20</span>
+            <span class="agenda-month">Mar</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Penyuluhan Kesehatan – Pencegahan DBD</h4>
+            <p><i class="fa fa-clock"></i> 10.00 – 12.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Balai Warga RW 09</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Edukasi pencegahan demam berdarah, pembagian abate, dan pemeriksaan jentik nyamuk bersama Puskesmas.</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <!-- Agenda Selesai -->
+        <div class="agenda-item" style="opacity:.75;">
+          <div class="agenda-date" style="background:var(--gray-400);">
+            <span class="agenda-day">07</span>
+            <span class="agenda-month">Feb</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Forum Musrenbang Kelurahan 2026</h4>
+            <p><i class="fa fa-clock"></i> 08.00 – 15.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Aula Kelurahan Petamburan</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Musyawarah perencanaan pembangunan membahas 48 usulan prioritas dari warga untuk tahun anggaran 2027.</p>
+          </div>
+          <span class="agenda-badge selesai">Selesai</span>
+        </div>
+        <div class="agenda-item" style="opacity:.75;">
+          <div class="agenda-date" style="background:var(--gray-400);">
+            <span class="agenda-day">01</span>
+            <span class="agenda-month">Feb</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Sambut Ramadan – Bersih-Bersih Masjid Arrahman</h4>
+            <p><i class="fa fa-clock"></i> 07.00 – 10.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Masjid Arrahman, RW 06</p>
+            <p style="font-size:12.5px;color:var(--gray-500);margin-top:6px;">Kegiatan kerja bakti membersihkan masjid bersama jajaran Kelurahan, Babinsa, Bhabinkamtibmas, dan warga.</p>
+          </div>
+          <span class="agenda-badge selesai">Selesai</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PRESTASI ==================== -->
+    <section class="section-block" id="prestasi">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Pencapaian</span>
+          <h2 class="section-title">Prestasi Kelurahan</h2>
+        </div>
+      </div>
+
+      <div class="prestasi-grid">
+        <!-- Prestasi 1 -->
+        <div class="prestasi-card">
+          <div class="prestasi-card-img" style="background-image:url('assets/img/prestasi1.svg')"></div>
+          <div class="prestasi-card-body">
+            <span class="prestasi-year"><i class="fa fa-trophy"></i> 2025</span>
+            <h3>Kelurahan Terbaik Se-Jakarta Pusat</h3>
+            <p>Meraih peringkat 1 dalam penilaian kinerja kelurahan se-wilayah Jakarta Pusat oleh Walikota Jakarta Pusat berdasarkan capaian program dan indeks kepuasan masyarakat.</p>
+            <div class="prestasi-meta">
+              <span><i class="fa fa-award"></i> Pemerintah Kota Jakarta Pusat</span>
+            </div>
+          </div>
+        </div>
+        <!-- Prestasi 2 -->
+        <div class="prestasi-card">
+          <div class="prestasi-card-img" style="background-image:url('assets/img/prestasi2.svg')"></div>
+          <div class="prestasi-card-body">
+            <span class="prestasi-year"><i class="fa fa-trophy"></i> 2025</span>
+            <h3>Juara I Lomba Lingkungan Bersih & Sehat</h3>
+            <p>RW 03 Kelurahan Petamburan berhasil meraih juara I lomba lingkungan bersih dan sehat tingkat Kecamatan Tanah Abang dalam program Kampung Berseri.</p>
+            <div class="prestasi-meta">
+              <span><i class="fa fa-award"></i> Kecamatan Tanah Abang</span>
+            </div>
+          </div>
+        </div>
+        <!-- Prestasi 3 -->
+        <div class="prestasi-card">
+          <div class="prestasi-card-img" style="background-image:url('assets/img/prestasi3.svg')"></div>
+          <div class="prestasi-card-body">
+            <span class="prestasi-year"><i class="fa fa-trophy"></i> 2024</span>
+            <h3>Penghargaan Pelayanan Publik "Sangat Baik"</h3>
+            <p>Mendapatkan predikat Pelayanan Publik kategori "Sangat Baik" dari Kementerian PAN-RB dengan nilai IKM 96,4 pada semester I tahun 2024.</p>
+            <div class="prestasi-meta">
+              <span><i class="fa fa-award"></i> Kementerian PAN-RB</span>
+            </div>
+          </div>
+        </div>
+        <!-- Prestasi 4 -->
+        <div class="prestasi-card">
+          <div class="prestasi-card-img" style="background-image:url('assets/img/prestasi4.svg')"></div>
+          <div class="prestasi-card-body">
+            <span class="prestasi-year"><i class="fa fa-trophy"></i> 2024</span>
+            <h3>Kelurahan Sadar Hukum</h3>
+            <p>Penetapan Kelurahan Petamburan sebagai Kelurahan Sadar Hukum oleh Kementerian Hukum dan HAM RI atas peran aktif dalam penyuluhan hukum masyarakat.</p>
+            <div class="prestasi-meta">
+              <span><i class="fa fa-award"></i> Kemenkumham RI</span>
+            </div>
+          </div>
+        </div>
+        <!-- Prestasi 5 -->
+        <div class="prestasi-card">
+          <div class="prestasi-card-img" style="background-image:url('assets/img/prestasi5.svg')"></div>
+          <div class="prestasi-card-body">
+            <span class="prestasi-year"><i class="fa fa-trophy"></i> 2023</span>
+            <h3>Juara II Posyandu Terintegrasi</h3>
+            <p>Posyandu Melati RW 07 meraih juara II lomba Posyandu terintegrasi tingkat Provinsi DKI Jakarta dalam mendukung program Stunting Zero.</p>
+            <div class="prestasi-meta">
+              <span><i class="fa fa-award"></i> Pemerintah Provinsi DKI Jakarta</span>
+            </div>
+          </div>
+        </div>
+        <!-- Prestasi 6 -->
+        <div class="prestasi-card">
+          <div class="prestasi-card-img" style="background-image:url('assets/img/prestasi6.svg')"></div>
+          <div class="prestasi-card-body">
+            <span class="prestasi-year"><i class="fa fa-trophy"></i> 2023</span>
+            <h3>Kampung Tangguh Jaya – Pencegahan Narkoba</h3>
+            <p>RW 11 Kelurahan Petamburan dinobatkan sebagai Kampung Tangguh Jaya atas upaya pencegahan penyalahgunaan narkoba dan pembinaan pemuda.</p>
+            <div class="prestasi-meta">
+              <span><i class="fa fa-award"></i> BNN & Polda Metro Jaya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INFOGRAFIS ==================== -->
+    <section class="section-block" id="infografis">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Data</span>
+          <h2 class="section-title">Infografis Kelurahan</h2>
+        </div>
+      </div>
+
+      <!-- Demografi -->
+      <div class="infografis-section">
+        <h3 class="infografis-subtitle"><i class="fa fa-chart-pie"></i> Data Demografi Penduduk</h3>
+        <div class="infografis-cards">
+          <div class="infografis-card">
+            <div class="infografis-card-icon" style="background:linear-gradient(135deg,#1565C0,#42A5F5);">
+              <i class="fa fa-users"></i>
+            </div>
+            <div class="infografis-card-value">42.538</div>
+            <div class="infografis-card-label">Total Penduduk</div>
+            <div class="infografis-card-sub">Data per Januari 2026</div>
+          </div>
+          <div class="infografis-card">
+            <div class="infografis-card-icon" style="background:linear-gradient(135deg,#2E7D32,#66BB6A);">
+              <i class="fa fa-male"></i>
+            </div>
+            <div class="infografis-card-value">21.836</div>
+            <div class="infografis-card-label">Laki-Laki</div>
+            <div class="infografis-card-sub">51,33% dari total</div>
+          </div>
+          <div class="infografis-card">
+            <div class="infografis-card-icon" style="background:linear-gradient(135deg,#AD1457,#EC407A);">
+              <i class="fa fa-female"></i>
+            </div>
+            <div class="infografis-card-value">20.702</div>
+            <div class="infografis-card-label">Perempuan</div>
+            <div class="infografis-card-sub">48,67% dari total</div>
+          </div>
+          <div class="infografis-card">
+            <div class="infografis-card-icon" style="background:linear-gradient(135deg,#E65100,#FF9800);">
+              <i class="fa fa-home"></i>
+            </div>
+            <div class="infografis-card-value">12.145</div>
+            <div class="infografis-card-label">Kepala Keluarga</div>
+            <div class="infografis-card-sub">Rata-rata 3,5 jiwa/KK</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Usia -->
+      <div class="infografis-section">
+        <h3 class="infografis-subtitle"><i class="fa fa-chart-bar"></i> Penduduk Berdasarkan Usia</h3>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);">
+          <div class="bar-chart-list">
+            <div class="bar-chart-item">
+              <div class="bar-label">0 – 14 tahun</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:22%;background:linear-gradient(90deg,#42A5F5,#1E88E5);">22%</div>
+              </div>
+              <div class="bar-value">9.358</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">15 – 24 tahun</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:18%;background:linear-gradient(90deg,#66BB6A,#43A047);">18%</div>
+              </div>
+              <div class="bar-value">7.657</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">25 – 44 tahun</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:35%;background:linear-gradient(90deg,var(--orange),var(--red));">35%</div>
+              </div>
+              <div class="bar-value">14.888</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">45 – 64 tahun</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:18%;background:linear-gradient(90deg,#AB47BC,#7B1FA2);">18%</div>
+              </div>
+              <div class="bar-value">7.657</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">65+ tahun</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:7%;background:linear-gradient(90deg,#78909C,#546E7A);">7%</div>
+              </div>
+              <div class="bar-value">2.978</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pendidikan -->
+      <div class="infografis-section">
+        <h3 class="infografis-subtitle"><i class="fa fa-graduation-cap"></i> Tingkat Pendidikan</h3>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);">
+          <div class="bar-chart-list">
+            <div class="bar-chart-item">
+              <div class="bar-label">Tidak/Belum Sekolah</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:8%;background:#BDBDBD;">8%</div>
+              </div>
+              <div class="bar-value">3.403</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">SD / Sederajat</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:15%;background:linear-gradient(90deg,#FFB74D,#FB8C00);">15%</div>
+              </div>
+              <div class="bar-value">6.381</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">SMP / Sederajat</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:18%;background:linear-gradient(90deg,#4FC3F7,#039BE5);">18%</div>
+              </div>
+              <div class="bar-value">7.657</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">SMA / Sederajat</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:36%;background:linear-gradient(90deg,#66BB6A,#2E7D32);">36%</div>
+              </div>
+              <div class="bar-value">15.314</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">Diploma / Sarjana</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:20%;background:linear-gradient(90deg,var(--red),var(--orange));">20%</div>
+              </div>
+              <div class="bar-value">8.508</div>
+            </div>
+            <div class="bar-chart-item">
+              <div class="bar-label">Pascasarjana (S2/S3)</div>
+              <div class="bar-track">
+                <div class="bar-fill" style="width:3%;background:linear-gradient(90deg,#7B1FA2,#CE93D8);">3%</div>
+              </div>
+              <div class="bar-value">1.276</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pekerjaan -->
+      <div class="infografis-section">
+        <h3 class="infografis-subtitle"><i class="fa fa-briefcase"></i> Mata Pencaharian Penduduk</h3>
+        <div class="infografis-cards" style="grid-template-columns:repeat(3,1fr);">
+          <div class="infografis-mini-card">
+            <i class="fa fa-store" style="color:var(--orange);"></i>
+            <div class="infografis-mini-val">32%</div>
+            <div class="infografis-mini-label">Pedagang / Wiraswasta</div>
+          </div>
+          <div class="infografis-mini-card">
+            <i class="fa fa-building" style="color:#1565C0;"></i>
+            <div class="infografis-mini-val">28%</div>
+            <div class="infografis-mini-label">Karyawan Swasta</div>
+          </div>
+          <div class="infografis-mini-card">
+            <i class="fa fa-landmark" style="color:var(--red);"></i>
+            <div class="infografis-mini-val">8%</div>
+            <div class="infografis-mini-label">PNS / TNI / Polri</div>
+          </div>
+          <div class="infografis-mini-card">
+            <i class="fa fa-tools" style="color:#6D4C41;"></i>
+            <div class="infografis-mini-val">12%</div>
+            <div class="infografis-mini-label">Buruh / Pekerja Harian</div>
+          </div>
+          <div class="infografis-mini-card">
+            <i class="fa fa-user-graduate" style="color:#7B1FA2;"></i>
+            <div class="infografis-mini-val">5%</div>
+            <div class="infografis-mini-label">Profesional / Tenaga Ahli</div>
+          </div>
+          <div class="infografis-mini-card">
+            <i class="fa fa-ellipsis-h" style="color:var(--gray-500);"></i>
+            <div class="infografis-mini-val">15%</div>
+            <div class="infografis-mini-label">Lainnya / Belum Bekerja</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== POTENSI KELURAHAN ==================== -->
+    <section class="section-block" id="potensi">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Unggulan</span>
+          <h2 class="section-title">Potensi Kelurahan</h2>
+        </div>
+      </div>
+
+      <div class="potensi-grid">
+        <!-- Potensi 1: UMKM -->
+        <div class="potensi-card">
+          <div class="potensi-card-visual" style="background-image:url('assets/img/potensi-umkm.svg');"></div>
+          <div class="potensi-card-body">
+            <div class="potensi-card-icon" style="background:#E65100;"><i class="fa fa-store"></i></div>
+            <h3>Sentra UMKM Kuliner & Konveksi</h3>
+            <p>Wilayah Petamburan dikenal sebagai sentra kuliner khas Betawi dan industri konveksi rumahan. Terdapat <strong>187 pelaku UMKM</strong> aktif yang memproduksi makanan tradisional, pakaian, dan kerajinan tangan.</p>
+            <ul class="potensi-highlights">
+              <li><i class="fa fa-check"></i> 87 warung kuliner & katering</li>
+              <li><i class="fa fa-check"></i> 52 konveksi & jahit pakaian</li>
+              <li><i class="fa fa-check"></i> 48 perdagangan & jasa lainnya</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Potensi 2: Budaya -->
+        <div class="potensi-card">
+          <div class="potensi-card-visual" style="background-image:url('assets/img/potensi-budaya.svg');"></div>
+          <div class="potensi-card-body">
+            <div class="potensi-card-icon" style="background:#AD1457;"><i class="fa fa-theater-masks"></i></div>
+            <h3>Kampung Budaya Betawi</h3>
+            <p>Kelurahan Petamburan memiliki kekayaan budaya Betawi yang masih lestari. Terdapat sanggar seni, kelompok tari, dan perayaan budaya rutin yang menjaga identitas lokal.</p>
+            <ul class="potensi-highlights">
+              <li><i class="fa fa-check"></i> 3 kelompok seni Betawi aktif</li>
+              <li><i class="fa fa-check"></i> Festival Betawi tahunan</li>
+              <li><i class="fa fa-check"></i> Upacara adat dan pernikahan Betawi</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Potensi 3: Pendidikan -->
+        <div class="potensi-card">
+          <div class="potensi-card-visual" style="background-image:url('assets/img/potensi-pendidikan.svg');"></div>
+          <div class="potensi-card-body">
+            <div class="potensi-card-icon" style="background:#1565C0;"><i class="fa fa-graduation-cap"></i></div>
+            <h3>Fasilitas Pendidikan Lengkap</h3>
+            <p>Wilayah Petamburan memiliki akses pendidikan yang memadai dari tingkat PAUD hingga SMA, termasuk pondok pesantren dan bimbingan belajar masyarakat.</p>
+            <ul class="potensi-highlights">
+              <li><i class="fa fa-check"></i> 8 PAUD / TK / RA</li>
+              <li><i class="fa fa-check"></i> 5 SD Negeri & 3 SD Swasta</li>
+              <li><i class="fa fa-check"></i> 4 SMP & 2 SMA / SMK</li>
+              <li><i class="fa fa-check"></i> 2 Pondok Pesantren</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Potensi 4: Kesehatan -->
+        <div class="potensi-card">
+          <div class="potensi-card-visual" style="background-image:url('assets/img/potensi-kesehatan.svg');"></div>
+          <div class="potensi-card-body">
+            <div class="potensi-card-icon" style="background:#2E7D32;"><i class="fa fa-heartbeat"></i></div>
+            <h3>Fasilitas Kesehatan</h3>
+            <p>Masyarakat Petamburan dilayani oleh berbagai fasilitas kesehatan yang komprehensif, dari puskesmas hingga rumah sakit rujukan tingkat kota.</p>
+            <ul class="potensi-highlights">
+              <li><i class="fa fa-check"></i> 1 Puskesmas Kecamatan Tanah Abang</li>
+              <li><i class="fa fa-check"></i> 11 Posyandu aktif (1 per RW)</li>
+              <li><i class="fa fa-check"></i> 6 Klinik & praktik dokter</li>
+              <li><i class="fa fa-check"></i> 2 Apotek & 4 toko obat</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Potensi 5: Keagamaan -->
+        <div class="potensi-card">
+          <div class="potensi-card-visual" style="background-image:url('assets/img/potensi-keagamaan.svg');"></div>
+          <div class="potensi-card-body">
+            <div class="potensi-card-icon" style="background:#00695C;"><i class="fa fa-mosque"></i></div>
+            <h3>Sarana Keagamaan</h3>
+            <p>Petamburan memiliki sarana ibadah yang beragam sebagai cerminan toleransi dan kerukunan masyarakat di wilayah kelurahan.</p>
+            <ul class="potensi-highlights">
+              <li><i class="fa fa-check"></i> 14 Masjid & Musholla</li>
+              <li><i class="fa fa-check"></i> 2 Gereja</li>
+              <li><i class="fa fa-check"></i> 1 Vihara</li>
+              <li><i class="fa fa-check"></i> Forum Kerukunan Umat Beragama aktif</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Potensi 6: Ruang Publik -->
+        <div class="potensi-card">
+          <div class="potensi-card-visual" style="background-image:url('assets/img/potensi-ruangpublik.svg');"></div>
+          <div class="potensi-card-body">
+            <div class="potensi-card-icon" style="background:#6A1B9A;"><i class="fa fa-tree"></i></div>
+            <h3>Ruang Publik Terpadu Ramah Anak (RPTRA)</h3>
+            <p>Kelurahan Petamburan memiliki RPTRA yang menjadi pusat aktivitas warga, mulai dari olahraga, bermain anak, hingga kegiatan komunitas dan pemberdayaan.</p>
+            <ul class="potensi-highlights">
+              <li><i class="fa fa-check"></i> 1 RPTRA aktif waktu penuh</li>
+              <li><i class="fa fa-check"></i> Perpustakaan mini & area belajar</li>
+              <li><i class="fa fa-check"></i> Lapangan olahraga multifungsi</li>
+              <li><i class="fa fa-check"></i> Taman bermain anak</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peta Wilayah -->
+      <div style="margin-top:32px;background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);">
+        <div style="background:linear-gradient(90deg,var(--red),var(--orange));padding:16px 24px;color:#fff;">
+          <h3 style="font-size:16px;font-weight:700;"><i class="fa fa-map"></i> Peta Wilayah Kelurahan Petamburan</h3>
+        </div>
+        <div style="padding:4px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3999!2d106.8050!3d-6.2088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6d26ffe43f9%3A0x5bb2bc7ffbe55ab6!2sPetamburan%2C%20Tanah%20Abang%2C%20Jakarta%20Pusat!5e0!3m2!1sid!2sid!4v1708600000000!5m2!1sid!2sid"
+            style="display:block;width:100%;height:350px;border:0;border-radius:0 0 var(--radius-lg) var(--radius-lg);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.main-content -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <!-- Profil Lurah -->
+    <div class="sidebar-card lurah-card">
+      <div class="lurah-photo-wrap">
+        <div class="lurah-photo-bg">
+          <img src="assets/img/lurah.svg" alt="Lurah"/>
+        </div>
+      </div>
+      <div class="lurah-info">
+        <span class="lurah-label">Lurah Kelurahan Petamburan</span>
+        <h3>Rian Hermanu</h3>
+        <div class="lurah-links">
+          <a href="perangkat.html"><i class="fa fa-user"></i> Profil</a>
+          <a href="perangkat.html"><i class="fa fa-history"></i> Riwayat</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Wilayah Ringkas -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-chart-area"></i> Sekilas Petamburan</div>
+      <div style="padding:18px;display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--gray-100);">
+          <span style="color:var(--gray-500);"><i class="fa fa-map-marked-alt" style="color:var(--orange);width:18px;"></i> Luas Wilayah</span>
+          <strong style="color:var(--gray-900);">90,10 Ha</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--gray-100);">
+          <span style="color:var(--gray-500);"><i class="fa fa-layer-group" style="color:var(--orange);width:18px;"></i> Jumlah RW</span>
+          <strong style="color:var(--gray-900);">11 RW</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--gray-100);">
+          <span style="color:var(--gray-500);"><i class="fa fa-home" style="color:var(--orange);width:18px;"></i> Jumlah RT</span>
+          <strong style="color:var(--gray-900);">116 RT</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--gray-100);">
+          <span style="color:var(--gray-500);"><i class="fa fa-users" style="color:var(--orange);width:18px;"></i> Penduduk</span>
+          <strong style="color:var(--gray-900);">42.538 Jiwa</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:8px 0;">
+          <span style="color:var(--gray-500);"><i class="fa fa-house-user" style="color:var(--orange);width:18px;"></i> Kepadatan</span>
+          <strong style="color:var(--gray-900);">472 jiwa/Ha</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Dokumen -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-download"></i> Unduh Dokumen</div>
+      <div style="padding:14px 18px;">
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--red);width:18px;"></i> Profil Kelurahan 2026
+          </a>
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--red);width:18px;"></i> Data Monografi Kelurahan
+          </a>
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-excel" style="color:#2E7D32;width:18px;"></i> Rekapitulasi Penduduk
+          </a>
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--red);width:18px;"></i> LKPJ Tahun 2025
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontak -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-phone-alt"></i> Kontak Kami</div>
+      <div class="kontak-list">
+        <a href="tel:02153035403" class="kontak-item"><i class="fa fa-phone"></i><span>(021) 5303540</span></a>
+        <a href="mailto:kel.petamburan@jakarta.go.id" class="kontak-item"><i class="fa fa-envelope"></i><span>kel.petamburan@jakarta.go.id</span></a>
+        <a href="#" class="kontak-item"><i class="fab fa-whatsapp"></i><span>0812-1234-5678 (WA)</span></a>
+      </div>
+    </div>
+
+    <!-- IKM Widget -->
+    <div class="sidebar-card ikm-card">
+      <div class="sidebar-card-header"><i class="fa fa-chart-bar"></i> Indeks Kepuasan Masyarakat</div>
+      <div class="ikm-body">
+        <div class="ikm-score">96,4</div>
+        <div class="ikm-bar-wrap">
+          <div class="ikm-bar" style="width:96.4%"></div>
+        </div>
+        <div class="ikm-label">Sangat Baik · Semester I 2025</div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- PPID BANNER -->
+<section class="ppid-banner">
+  <div class="ppid-banner-inner">
+    <div class="ppid-banner-text">
+      <i class="fa fa-shield-alt"></i>
+      <div>
+        <h3>Keterbukaan Informasi Publik (PPID)</h3>
+        <p>Ajukan permohonan informasi atau keberatan secara online</p>
+      </div>
+    </div>
+    <div class="ppid-banner-actions">
+      <a href="ppid.html" class="btn-ppid primary">Form Permohonan</a>
+      <a href="ppid.html#form-keberatan" class="btn-ppid secondary">Form Keberatan</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col brand">
+      <div class="footer-brand">
+        <div class="footer-brand-text">
+          <strong>Kelurahan Petamburan</strong>
+          <span>Kecamatan Tanah Abang, Jakarta Pusat</span>
+        </div>
+      </div>
+      <p class="footer-desc">Melayani masyarakat dengan sepenuh hati, transparan, akuntabel, dan berintegritas.</p>
+      <div class="footer-sosmed">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="layanan.html">Pengantar KTP</a></li>
+        <li><a href="layanan.html">Kartu Keluarga</a></li>
+        <li><a href="layanan.html">Surat Domisili</a></li>
+        <li><a href="pengaduan.html">Pengaduan</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="perangkat.html">Perangkat</a></li>
+        <li><a href="informasi.html">Agenda & Infografis</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <div class="footer-kontak">
+        <p><i class="fa fa-map-marker-alt"></i> Jl. KS Tubun No.1, Jakarta Pusat</p>
+        <p><i class="fa fa-phone"></i> (021) 5303540</p>
+        <p><i class="fa fa-envelope"></i> kel.petamburan@jakarta.go.id</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kelurahan Petamburan – Pemerintah Provinsi DKI Jakarta</span>
+    <span>Dibangun oleh Tim IT Pemprov DKI Jakarta</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

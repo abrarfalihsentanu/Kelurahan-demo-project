@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500" width="1400" height="500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#004D40;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#00695C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#00897B;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1400" height="500" fill="url(#bg2)"/>
+  <!-- Mosque dome -->
+  <path d="M500,300 Q500,180 700,150 Q900,180 900,300" fill="#26A69A" opacity="0.5"/>
+  <path d="M550,300 Q550,200 700,170 Q850,200 850,300" fill="#4DB6AC" opacity="0.4"/>
+  <!-- Main dome -->
+  <ellipse cx="700" cy="220" rx="120" ry="80" fill="#80CBC4" opacity="0.3"/>
+  <!-- Minaret left -->
+  <rect x="460" y="160" width="30" height="180" fill="#4DB6AC" opacity="0.5"/>
+  <polygon points="460,160 475,120 490,160" fill="#80CBC4" opacity="0.5"/>
+  <circle cx="475" cy="120" r="8" fill="#F39C12" opacity="0.8"/>
+  <!-- Minaret right -->
+  <rect x="910" y="160" width="30" height="180" fill="#4DB6AC" opacity="0.5"/>
+  <polygon points="910,160 925,120 940,160" fill="#80CBC4" opacity="0.5"/>
+  <circle cx="925" cy="120" r="8" fill="#F39C12" opacity="0.8"/>
+  <!-- Main building -->
+  <rect x="480" y="300" width="440" height="120" fill="#37474F" opacity="0.6"/>
+  <!-- Door -->
+  <path d="M670,420 L670,330 Q700,310 730,330 L730,420" fill="#5D4037" opacity="0.6"/>
+  <!-- Windows -->
+  <path d="M520,360 Q535,340 550,360 L550,390 L520,390 Z" fill="#FFF9C4" opacity="0.5"/>
+  <path d="M590,360 Q605,340 620,360 L620,390 L590,390 Z" fill="#FFF9C4" opacity="0.5"/>
+  <path d="M780,360 Q795,340 810,360 L810,390 L780,390 Z" fill="#FFF9C4" opacity="0.5"/>
+  <path d="M850,360 Q865,340 880,360 L880,390 L850,390 Z" fill="#FFF9C4" opacity="0.5"/>
+  <!-- Crescent on dome -->
+  <circle cx="700" cy="155" r="15" fill="#F39C12" opacity="0.9"/>
+  <circle cx="707" cy="152" r="12" fill="#00695C"/>
+  <!-- Ground -->
+  <rect x="0" y="420" width="1400" height="80" fill="#2E7D32" opacity="0.4"/>
+  <!-- People cleaning (simplified silhouettes) -->
+  <circle cx="350" cy="385" r="10" fill="white" opacity="0.3"/>
+  <rect x="344" y="395" width="12" height="25" fill="white" opacity="0.3" rx="3"/>
+  <line x1="340" y1="400" x2="330" y2="420" stroke="white" stroke-width="2" opacity="0.3"/>
+  <circle cx="400" cy="390" r="9" fill="white" opacity="0.25"/>
+  <rect x="395" y="399" width="10" height="22" fill="white" opacity="0.25" rx="3"/>
+  <circle cx="1000" cy="388" r="10" fill="white" opacity="0.3"/>
+  <rect x="994" y="398" width="12" height="24" fill="white" opacity="0.3" rx="3"/>
+  <line x1="1006" y1="403" x2="1020" y2="425" stroke="white" stroke-width="2" opacity="0.3"/>
+  <circle cx="1060" cy="392" r="9" fill="white" opacity="0.25"/>
+  <rect x="1055" y="401" width="10" height="20" fill="white" opacity="0.25" rx="3"/>
+  <!-- Broom/cleaning tools -->
+  <line x1="330" y1="420" x2="320" y2="450" stroke="#8D6E63" stroke-width="3" opacity="0.4"/>
+  <line x1="1020" y1="425" x2="1010" y2="455" stroke="#8D6E63" stroke-width="3" opacity="0.4"/>
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="2" fill="white" opacity="0.5"/>
+  <circle cx="300" cy="80" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1100" cy="40" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1300" cy="70" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="200" cy="120" r="1" fill="white" opacity="0.3"/>
+</svg>

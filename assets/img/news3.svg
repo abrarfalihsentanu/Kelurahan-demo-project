@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="n3bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6A1B9A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#AB47BC;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#n3bg)"/>
+  <!-- Training room - PKK theme -->
+  <!-- Whiteboard -->
+  <rect x="180" y="60" width="240" height="140" fill="white" opacity="0.15" rx="5"/>
+  <text x="300" y="100" text-anchor="middle" font-family="Arial" font-size="11" fill="white" opacity="0.3" font-weight="bold">PELATIHAN</text>
+  <text x="300" y="118" text-anchor="middle" font-family="Arial" font-size="10" fill="white" opacity="0.25">MAKANAN SEHAT &amp; BERGIZI</text>
+  <!-- Food illustrations on board -->
+  <circle cx="260" cy="155" r="15" fill="#4CAF50" opacity="0.2"/>
+  <circle cx="300" cy="155" r="15" fill="#FF9800" opacity="0.2"/>
+  <circle cx="340" cy="155" r="15" fill="#F44336" opacity="0.2"/>
+  <!-- Instructor -->
+  <circle cx="300" cy="230" r="16" fill="white" opacity="0.3"/>
+  <rect x="290" y="246" width="20" height="24" fill="#E91E63" opacity="0.35" rx="4"/>
+  <!-- Table with food samples -->
+  <rect x="240" y="280" width="120" height="12" fill="#8D6E63" opacity="0.3" rx="3"/>
+  <circle cx="265" cy="275" r="8" fill="#4CAF50" opacity="0.25"/>
+  <circle cx="290" cy="273" r="9" fill="#FF9800" opacity="0.25"/>
+  <circle cx="315" cy="275" r="8" fill="#F44336" opacity="0.25"/>
+  <circle cx="340" cy="274" r="7" fill="#FFC107" opacity="0.25"/>
+  <!-- Participant rows -->
+  <!-- Row 1 -->
+  <circle cx="120" cy="300" r="12" fill="white" opacity="0.2"/>
+  <rect x="113" y="312" width="14" height="14" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="160" cy="305" r="11" fill="white" opacity="0.18"/>
+  <rect x="154" y="316" width="12" height="13" fill="#EC407A" opacity="0.25" rx="3"/>
+  <circle cx="200" cy="302" r="12" fill="white" opacity="0.2"/>
+  <rect x="193" y="314" width="14" height="14" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="400" cy="300" r="12" fill="white" opacity="0.2"/>
+  <rect x="393" y="312" width="14" height="14" fill="#CE93D8" opacity="0.25" rx="3"/>
+  <circle cx="440" cy="305" r="11" fill="white" opacity="0.18"/>
+  <rect x="434" y="316" width="12" height="13" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="480" cy="302" r="12" fill="white" opacity="0.2"/>
+  <rect x="473" y="314" width="14" height="14" fill="#F48FB1" opacity="0.25" rx="3"/>
+  <!-- Row 2 -->
+  <circle cx="140" cy="350" r="11" fill="white" opacity="0.15"/>
+  <rect x="134" y="361" width="12" height="12" fill="#E91E63" opacity="0.2" rx="3"/>
+  <circle cx="180" cy="352" r="10" fill="white" opacity="0.13"/>
+  <rect x="175" y="362" width="10" height="11" fill="#AB47BC" opacity="0.2" rx="3"/>
+  <circle cx="220" cy="348" r="11" fill="white" opacity="0.15"/>
+  <rect x="214" y="359" width="12" height="13" fill="#E91E63" opacity="0.2" rx="3"/>
+  <circle cx="380" cy="350" r="11" fill="white" opacity="0.15"/>
+  <rect x="374" y="361" width="12" height="12" fill="#F48FB1" opacity="0.2" rx="3"/>
+  <circle cx="420" cy="352" r="10" fill="white" opacity="0.13"/>
+  <rect x="415" y="362" width="10" height="11" fill="#E91E63" opacity="0.2" rx="3"/>
+  <circle cx="460" cy="348" r="11" fill="white" opacity="0.15"/>
+  <rect x="454" y="359" width="12" height="13" fill="#CE93D8" opacity="0.2" rx="3"/>
+  <!-- PKK Banner -->
+  <rect x="170" y="30" width="260" height="22" fill="#E91E63" opacity="0.35" rx="4"/>
+  <text x="300" y="46" text-anchor="middle" font-family="Arial" font-size="10" fill="white" opacity="0.5" font-weight="bold">TIM PENGGERAK PKK KELURAHAN PETAMBURAN</text>
+</svg>

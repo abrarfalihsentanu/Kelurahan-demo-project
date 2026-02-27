@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="plbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ECEFF1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#CFD8DC;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="150" r="150" fill="url(#plbg)"/>
+  <!-- Silhouette -->
+  <circle cx="150" cy="120" r="45" fill="#90A4AE"/>
+  <ellipse cx="150" cy="280" rx="70" ry="60" fill="#90A4AE"/>
+  <!-- Camera icon -->
+  <rect x="125" y="175" width="50" height="35" fill="#78909C" rx="5"/>
+  <circle cx="150" cy="190" r="10" fill="#B0BEC5"/>
+  <circle cx="150" cy="190" r="6" fill="#90A4AE"/>
+  <rect x="140" y="172" width="20" height="6" fill="#78909C" rx="2"/>
+</svg>

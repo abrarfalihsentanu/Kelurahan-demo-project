@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ECEFF1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#CFD8DC;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#37474F;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#455A64;stop-opacity:1"/>
+    </linearGradient>
+    <clipPath id="circle-clip">
+      <circle cx="150" cy="150" r="140"/>
+    </clipPath>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="150" fill="url(#lbg)"/>
+  <g clip-path="url(#circle-clip)">
+    <!-- Body / Suit -->
+    <ellipse cx="150" cy="340" rx="110" ry="100" fill="url(#suit)"/>
+    <!-- Shirt collar -->
+    <polygon points="120,240 150,270 180,240 175,235 150,258 125,235" fill="white"/>
+    <!-- Tie -->
+    <polygon points="145,258 155,258 152,300 148,300" fill="#C0392B"/>
+    <polygon points="143,255 157,255 155,260 145,260" fill="#C0392B"/>
+    <!-- Neck -->
+    <rect x="135" y="215" width="30" height="35" fill="#D7B899" rx="5"/>
+    <!-- Head -->
+    <ellipse cx="150" cy="155" rx="55" ry="65" fill="#E0C9A6"/>
+    <!-- Hair -->
+    <ellipse cx="150" cy="105" rx="55" ry="30" fill="#37474F"/>
+    <rect x="95" y="100" width="15" height="50" fill="#37474F" rx="4"/>
+    <rect x="190" y="100" width="15" height="50" fill="#37474F" rx="4"/>
+    <!-- Eyes -->
+    <ellipse cx="130" cy="155" rx="6" ry="5" fill="#37474F"/>
+    <ellipse cx="170" cy="155" rx="6" ry="5" fill="#37474F"/>
+    <circle cx="131" cy="154" r="2" fill="white"/>
+    <circle cx="171" cy="154" r="2" fill="white"/>
+    <!-- Eyebrows -->
+    <line x1="120" y1="142" x2="140" y2="144" stroke="#37474F" stroke-width="3" stroke-linecap="round"/>
+    <line x1="160" y1="144" x2="180" y2="142" stroke="#37474F" stroke-width="3" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M148,158 Q150,172 152,158" stroke="#C0A882" stroke-width="2" fill="none"/>
+    <!-- Mouth (smile) -->
+    <path d="M135,182 Q150,195 165,182" stroke="#B07D56" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Ears -->
+    <ellipse cx="95" cy="158" rx="10" ry="14" fill="#E0C9A6"/>
+    <ellipse cx="205" cy="158" rx="10" ry="14" fill="#E0C9A6"/>
+    <!-- Glasses (optional) -->
+    <circle cx="130" cy="155" r="15" fill="none" stroke="#546E7A" stroke-width="2"/>
+    <circle cx="170" cy="155" r="15" fill="none" stroke="#546E7A" stroke-width="2"/>
+    <line x1="145" y1="155" x2="155" y2="155" stroke="#546E7A" stroke-width="2"/>
+    <!-- Peci/kopiah -->
+    <ellipse cx="150" cy="98" rx="48" ry="12" fill="#1A1A2E"/>
+    <rect x="102" y="72" width="96" height="28" fill="#1A1A2E" rx="3"/>
+    <ellipse cx="150" cy="72" rx="48" ry="8" fill="#2D2D44"/>
+  </g>
+</svg>

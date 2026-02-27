@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="n4bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E67E22;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#F39C12;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#n4bg)"/>
+  <!-- Pelantikan (inauguration) scene -->
+  <!-- Podium -->
+  <rect x="220" y="160" width="160" height="180" fill="white" opacity="0.12" rx="4"/>
+  <rect x="230" y="200" width="140" height="10" fill="white" opacity="0.08"/>
+  <!-- National emblem placeholder -->
+  <circle cx="300" cy="110" r="30" fill="#F9A825" opacity="0.3"/>
+  <text x="300" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="white" opacity="0.4" font-weight="bold">GARUDA</text>
+  <!-- Person at podium (speaker) -->
+  <circle cx="300" cy="175" r="14" fill="white" opacity="0.3"/>
+  <rect x="291" y="189" width="18" height="22" fill="#5D4037" opacity="0.3" rx="3"/>
+  <!-- Microphone -->
+  <line x1="285" y1="195" x2="280" y2="183" stroke="#9E9E9E" stroke-width="2" opacity="0.3"/>
+  <circle cx="278" cy="180" r="4" fill="#9E9E9E" opacity="0.3"/>
+  <!-- Rows of people being inaugurated -->
+  <!-- Row 1 - standing -->
+  <circle cx="120" cy="240" r="13" fill="white" opacity="0.23"/>
+  <rect x="113" y="253" width="14" height="22" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="160" cy="235" r="12" fill="white" opacity="0.2"/>
+  <rect x="154" y="247" width="12" height="24" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="200" cy="238" r="13" fill="white" opacity="0.23"/>
+  <rect x="193" y="251" width="14" height="22" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="400" cy="240" r="13" fill="white" opacity="0.23"/>
+  <rect x="393" y="253" width="14" height="22" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="440" cy="235" r="12" fill="white" opacity="0.2"/>
+  <rect x="434" y="247" width="12" height="24" fill="#E91E63" opacity="0.25" rx="3"/>
+  <circle cx="480" cy="238" r="13" fill="white" opacity="0.23"/>
+  <rect x="473" y="251" width="14" height="22" fill="#E91E63" opacity="0.25" rx="3"/>
+  <!-- Selempang / sash -->
+  <line x1="117" y1="255" x2="123" y2="275" stroke="#F44336" stroke-width="3" opacity="0.25"/>
+  <line x1="157" y1="249" x2="163" y2="271" stroke="#F44336" stroke-width="3" opacity="0.25"/>
+  <line x1="197" y1="253" x2="203" y2="273" stroke="#F44336" stroke-width="3" opacity="0.25"/>
+  <line x1="397" y1="255" x2="403" y2="275" stroke="#F44336" stroke-width="3" opacity="0.25"/>
+  <line x1="437" y1="249" x2="443" y2="271" stroke="#F44336" stroke-width="3" opacity="0.25"/>
+  <line x1="477" y1="253" x2="483" y2="273" stroke="#F44336" stroke-width="3" opacity="0.25"/>
+  <!-- Audience (row 2) -->
+  <circle cx="140" cy="310" r="10" fill="white" opacity="0.15"/>
+  <circle cx="180" cy="315" r="9" fill="white" opacity="0.12"/>
+  <circle cx="220" cy="312" r="10" fill="white" opacity="0.15"/>
+  <circle cx="260" cy="315" r="9" fill="white" opacity="0.12"/>
+  <circle cx="340" cy="315" r="9" fill="white" opacity="0.12"/>
+  <circle cx="380" cy="312" r="10" fill="white" opacity="0.15"/>
+  <circle cx="420" cy="315" r="9" fill="white" opacity="0.12"/>
+  <circle cx="460" cy="312" r="10" fill="white" opacity="0.15"/>
+  <!-- Banner at top -->
+  <rect x="130" y="55" width="340" height="30" fill="white" opacity="0.12" rx="5"/>
+  <text x="300" y="75" text-anchor="middle" font-family="Arial" font-size="10" fill="white" opacity="0.35" font-weight="bold">PELANTIKAN KETUA TP PKK KELURAHAN SE-KEC. TANAH ABANG</text>
+  <!-- Floor -->
+  <rect x="0" y="350" width="600" height="50" fill="white" opacity="0.05"/>
+</svg>

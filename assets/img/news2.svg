@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="n2bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B5E20;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4CAF50;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#n2bg)"/>
+  <!-- Mosque simplified -->
+  <path d="M200,250 Q200,160 300,130 Q400,160 400,250" fill="#66BB6A" opacity="0.3"/>
+  <ellipse cx="300" cy="170" rx="70" ry="50" fill="#81C784" opacity="0.25"/>
+  <!-- Dome top -->
+  <circle cx="300" cy="130" r="8" fill="#F9A825" opacity="0.7"/>
+  <!-- Minarets -->
+  <rect x="175" y="150" width="15" height="120" fill="#81C784" opacity="0.3"/>
+  <rect x="410" y="150" width="15" height="120" fill="#81C784" opacity="0.3"/>
+  <!-- Building base -->
+  <rect x="190" y="250" width="220" height="80" fill="#43A047" opacity="0.3"/>
+  <!-- Door -->
+  <path d="M280,330 L280,270 Q300,255 320,270 L320,330" fill="#2E7D32" opacity="0.4"/>
+  <!-- Windows -->
+  <path d="M210,280 Q220,268 230,280 L230,300 L210,300 Z" fill="#FFF9C4" opacity="0.3"/>
+  <path d="M370,280 Q380,268 390,280 L390,300 L370,300 Z" fill="#FFF9C4" opacity="0.3"/>
+  <!-- People cleaning -->
+  <circle cx="140" cy="290" r="12" fill="white" opacity="0.3"/>
+  <rect x="134" y="302" width="12" height="18" fill="white" opacity="0.25" rx="3"/>
+  <line x1="130" y1="310" x2="115" y2="340" stroke="#8D6E63" stroke-width="3" opacity="0.3"/>
+  <circle cx="470" cy="285" r="13" fill="white" opacity="0.3"/>
+  <rect x="463" y="298" width="14" height="20" fill="white" opacity="0.25" rx="3"/>
+  <line x1="477" y1="308" x2="495" y2="340" stroke="#8D6E63" stroke-width="3" opacity="0.3"/>
+  <circle cx="510" cy="295" r="11" fill="white" opacity="0.2"/>
+  <rect x="505" y="306" width="10" height="16" fill="white" opacity="0.2" rx="3"/>
+  <!-- Bucket -->
+  <rect x="120" y="335" width="18" height="15" fill="#42A5F5" opacity="0.3" rx="2"/>
+  <!-- Ground -->
+  <rect x="0" y="340" width="600" height="60" fill="#1B5E20" opacity="0.3"/>
+  <!-- Sparkle effects (clean) -->
+  <text x="250" y="250" font-family="Arial" font-size="16" fill="white" opacity="0.3">✦</text>
+  <text x="350" y="240" font-family="Arial" font-size="12" fill="white" opacity="0.25">✦</text>
+  <text x="200" y="230" font-family="Arial" font-size="10" fill="white" opacity="0.2">✦</text>
+</svg>

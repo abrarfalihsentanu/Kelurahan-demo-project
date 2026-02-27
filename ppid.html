@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PPID – Kelurahan Petamburan</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- Primary CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<div class="a11y-widget" id="a11yWidget">
+  <button class="a11y-toggle" id="a11yToggle" aria-label="Buka Menu Aksesibilitas" title="Menu Aksesibilitas (CTRL+U)">
+    <i class="fa fa-universal-access"></i>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yTitle" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3 id="a11yTitle"><i class="fa fa-universal-access"></i> Menu Aksesibilitas (CTRL+U)</h3>
+      <button class="a11y-close" id="a11yClose" aria-label="Tutup Menu"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="a11y-lang"><i class="fa fa-globe"></i> Bahasa Indonesia (Indonesian)</div>
+    <div class="a11y-grid">
+      <button class="a11y-btn" data-action="speech" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-volume-up"></i></div><span>Mode Suara</span></button>
+      <button class="a11y-btn" data-action="font-increase" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;">T</span><span style="font-size:24px;font-weight:700;">T</span></div><span>Perbesar Teks</span></button>
+      <button class="a11y-btn" data-action="font-decrease" aria-pressed="false"><div class="a11y-icon"><span style="font-size:24px;font-weight:700;">T</span><span style="font-size:18px;font-weight:700;">T</span></div><span>Perkecil Teks</span></button>
+      <button class="a11y-btn" data-action="grayscale" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-tint"></i></div><span>Skala Abu-Abu</span></button>
+      <button class="a11y-btn" data-action="contrast" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-adjust"></i></div><span>Kontras+</span></button>
+      <button class="a11y-btn" data-action="hide-images" aria-pressed="false"><div class="a11y-icon" style="position:relative;"><i class="fa fa-image"></i><i class="fa fa-ban" style="position:absolute;font-size:28px;opacity:.7;"></i></div><span>Sembunyikan Gambar</span></button>
+      <button class="a11y-btn" data-action="text-align" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-align-justify"></i></div><span>Rata Tulisan</span></button>
+      <button class="a11y-btn" data-action="dyslexia" aria-pressed="false"><div class="a11y-icon"><span style="font-size:28px;font-weight:700;">A</span></div><span>Tulisan Dapat Dibaca</span></button>
+      <button class="a11y-btn" data-action="line-height" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-text-height"></i></div><span>Tinggi Garis</span></button>
+      <button class="a11y-btn" data-action="pause-animation" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-hourglass-half"></i></div><span>Animasi Dijeda</span></button>
+      <button class="a11y-btn" data-action="big-cursor" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-mouse-pointer"></i></div><span>Kursor</span></button>
+      <button class="a11y-btn" data-action="letter-spacing" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;letter-spacing:6px;">T T</span></div><span>Spasi Teks</span></button>
+      <button class="a11y-btn" data-action="underline-links" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-underline"></i></div><span>Garis Bawahi Tautan</span></button>
+      <button class="a11y-btn a11y-reset" data-action="reset"><div class="a11y-icon"><i class="fa fa-undo"></i></div><span>Reset Semua</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="fa fa-clock"></i> Jam Layanan: Senin–Jumat, 08.00–16.00 WIB</span>
+      <span><i class="fa fa-phone"></i> (021) 5303540</span>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-header-btn" id="a11yHeaderBtn" title="Menu Aksesibilitas (CTRL+U)" aria-label="Buka Menu Aksesibilitas">
+        <i class="fa fa-universal-access"></i>
+      </button>
+      <span id="clock-date"></span>
+      <a href="#" class="lang active">ID</a>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="assets/img/logo-dki.svg" alt="Logo DKI" class="logo-dki"/>
+      <div class="brand-text">
+        <span class="brand-sub">Pemerintah Provinsi DKI Jakarta</span>
+        <span class="brand-name">Kelurahan Petamburan</span>
+        <span class="brand-info">Kecamatan Tanah Abang · Jakarta Pusat</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="has-dropdown">
+          <a href="#">Perangkat <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="perangkat.html">Struktur Organisasi</a></li>
+            <li><a href="perangkat.html#pejabat">Daftar Pejabat</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Layanan <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="layanan.html">Jenis Pelayanan</a></li>
+            <li><a href="layanan.html#jam">Jam Pelayanan</a></li>
+          </ul>
+        </li>
+        <li><a href="informasi.html">Informasi</a></li>
+        <li><a href="pengaduan.html"><i class="fa fa-bullhorn"></i> Pengaduan</a></li>
+        <li class="active"><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="page-banner-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>PPID</span>
+    </div>
+    <h1><i class="fa fa-shield-alt"></i> Pejabat Pengelola Informasi & Dokumentasi</h1>
+    <p>Wujud komitmen Kelurahan Petamburan terhadap keterbukaan informasi publik sesuai UU No. 14 Tahun 2008.</p>
+  </div>
+</section>
+
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <!-- PPID OVERVIEW -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">PPID</span>
+          <h2 class="section-title">Layanan Informasi Publik</h2>
+        </div>
+      </div>
+      <div class="ppid-grid">
+        <a href="#" class="ppid-card" style="text-decoration:none;">
+          <div class="ppid-card-icon"><i class="fa fa-sitemap"></i></div>
+          <div>
+            <h4>Struktur PPID</h4>
+            <p>Susunan organisasi Pejabat Pengelola Informasi dan Dokumentasi Kelurahan Petamburan</p>
+          </div>
+        </a>
+        <a href="#" class="ppid-card" style="text-decoration:none;">
+          <div class="ppid-card-icon"><i class="fa fa-tasks"></i></div>
+          <div>
+            <h4>Tugas dan Fungsi PPID</h4>
+            <p>Uraian tugas pokok dan fungsi PPID dalam pengelolaan informasi publik</p>
+          </div>
+        </a>
+        <a href="#" class="ppid-card" style="text-decoration:none;">
+          <div class="ppid-card-icon"><i class="fa fa-folder-open"></i></div>
+          <div>
+            <h4>Dokumen Informasi Publik</h4>
+            <p>Daftar dokumen informasi publik yang tersedia untuk diakses masyarakat</p>
+          </div>
+        </a>
+        <a href="#" class="ppid-card" style="text-decoration:none;">
+          <div class="ppid-card-icon"><i class="fa fa-clock"></i></div>
+          <div>
+            <h4>Waktu & Biaya Layanan</h4>
+            <p>Informasi mengenai standar waktu dan biaya dalam pelayanan informasi publik</p>
+          </div>
+        </a>
+        <a href="#" class="ppid-card" style="text-decoration:none;">
+          <div class="ppid-card-icon"><i class="fa fa-calendar-alt"></i></div>
+          <div>
+            <h4>Informasi Berkala</h4>
+            <p>Informasi yang wajib disediakan dan diumumkan secara berkala kepada publik</p>
+          </div>
+        </a>
+        <a href="#" class="ppid-card" style="text-decoration:none;">
+          <div class="ppid-card-icon"><i class="fa fa-project-diagram"></i></div>
+          <div>
+            <h4>SOP PPID</h4>
+            <p>Standar Operasional Prosedur pelayanan informasi dan penanganan sengketa</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FORM PERMOHONAN -->
+    <section class="section-block" id="form-permohonan">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Online</span>
+          <h2 class="section-title">Form Permohonan Informasi Publik</h2>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-card-header">
+          <h3><i class="fa fa-file-alt"></i> Formulir Permohonan Informasi</h3>
+          <p>Silakan isi formulir berikut untuk mengajukan permohonan informasi publik kepada PPID Kelurahan Petamburan</p>
+        </div>
+        <div class="form-body">
+          <form class="ppid-form" id="formPermohonan">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap <span style="color:var(--red)">*</span></label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required/>
+              </div>
+              <div class="form-group">
+                <label for="nik">NIK</label>
+                <input type="text" id="nik" placeholder="Nomor Induk Kependudukan"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telp">No. Telepon <span style="color:var(--red)">*</span></label>
+                <input type="tel" id="telp" placeholder="Contoh: 0812-xxxx-xxxx" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email@contoh.com"/>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label for="alamat">Alamat Lengkap <span style="color:var(--red)">*</span></label>
+              <input type="text" id="alamat" placeholder="Jalan, RT/RW, Kelurahan, Kecamatan" required/>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tujuan">Tujuan Permohonan <span style="color:var(--red)">*</span></label>
+                <select id="tujuan" required>
+                  <option value="">-- Pilih Tujuan --</option>
+                  <option>Keperluan Pribadi</option>
+                  <option>Penelitian / Akademik</option>
+                  <option>Jurnalistik / Media</option>
+                  <option>Hukum / Advokasi</option>
+                  <option>Bisnis / Komersial</option>
+                  <option>Lainnya</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cara">Cara Mendapatkan Informasi <span style="color:var(--red)">*</span></label>
+                <select id="cara" required>
+                  <option value="">-- Pilih Cara --</option>
+                  <option>Datang Langsung</option>
+                  <option>Email</option>
+                  <option>WhatsApp</option>
+                  <option>Pos / Kurir</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label for="info">Informasi yang Diminta <span style="color:var(--red)">*</span></label>
+              <textarea id="info" placeholder="Jelaskan secara rinci informasi apa yang Anda butuhkan..." required></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom:24px;">
+              <label for="lampiran">Lampiran (KTP / dokumen pendukung)</label>
+              <input type="file" id="lampiran" style="padding:8px;background:var(--gray-100);border:1.5px dashed var(--gray-300);"/>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+              <input type="checkbox" id="setuju" required style="width:18px;height:18px;accent-color:var(--red);"/>
+              <label for="setuju" style="font-size:13.5px;color:var(--gray-700);">Saya menyatakan bahwa data yang diisi adalah benar dan dapat dipertanggungjawabkan.</label>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fa fa-paper-plane"></i> Kirim Permohonan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM KEBERATAN -->
+    <section class="section-block" id="form-keberatan">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Keberatan</span>
+          <h2 class="section-title">Form Pengajuan Keberatan Informasi Publik</h2>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-card-header" style="background:linear-gradient(90deg,var(--red-dark),var(--red));">
+          <h3><i class="fa fa-exclamation-triangle"></i> Formulir Pengajuan Keberatan</h3>
+          <p>Gunakan formulir ini jika permohonan informasi Anda tidak ditindaklanjuti atau ditolak tanpa alasan yang sah</p>
+        </div>
+        <div class="form-body">
+          <form class="ppid-form" id="formKeberatan">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nama Lengkap Pemohon <span style="color:var(--red)">*</span></label>
+                <input type="text" placeholder="Nama sesuai KTP" required/>
+              </div>
+              <div class="form-group">
+                <label>No. Registrasi Permohonan</label>
+                <input type="text" placeholder="Nomor registrasi sebelumnya"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>No. Telepon <span style="color:var(--red)">*</span></label>
+                <input type="tel" placeholder="0812-xxxx-xxxx" required/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="email@contoh.com"/>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label>Alasan Keberatan <span style="color:var(--red)">*</span></label>
+              <select required>
+                <option value="">-- Pilih Alasan --</option>
+                <option>Permohonan tidak ditanggapi</option>
+                <option>Informasi yang diberikan tidak sesuai</option>
+                <option>Permohonan ditolak tanpa alasan jelas</option>
+                <option>Biaya tidak wajar</option>
+                <option>Informasi disampaikan melebihi batas waktu</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label>Uraian Keberatan <span style="color:var(--red)">*</span></label>
+              <textarea placeholder="Jelaskan secara rinci kronologi dan dasar keberatan Anda..." required></textarea>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+              <input type="checkbox" required style="width:18px;height:18px;accent-color:var(--red);"/>
+              <label style="font-size:13.5px;color:var(--gray-700);">Saya menyatakan bahwa uraian keberatan yang disampaikan adalah benar.</label>
+            </div>
+            <button type="submit" class="btn-submit" style="background:linear-gradient(90deg,var(--red-dark),var(--red));">
+              <i class="fa fa-paper-plane"></i> Kirim Keberatan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-info-circle"></i> Tentang PPID</div>
+      <div style="padding:18px;font-size:13.5px;color:var(--gray-700);line-height:1.7;">
+        <p>PPID Kelurahan Petamburan adalah pejabat yang bertanggung jawab mengelola, menyimpan, mendokumentasikan, dan menyediakan layanan informasi publik.</p>
+        <div style="margin-top:14px;padding:12px;background:var(--orange-pale);border-radius:8px;border-left:3px solid var(--orange);">
+          <strong style="font-size:13px;color:var(--orange);">Dasar Hukum:</strong>
+          <p style="margin-top:4px;font-size:12.5px;">UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-list-alt"></i> Prosedur PPID</div>
+      <div style="padding:14px 18px;">
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--orange);width:18px;"></i> Prosedur Pelayanan Informasi
+          </a>
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--orange);width:18px;"></i> Prosedur Pengajuan Keberatan
+          </a>
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;border-bottom:1px solid var(--gray-100);font-size:13.5px;color:var(--gray-700);text-decoration:none;transition:all .25s;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--orange);width:18px;"></i> Prosedur Penyelesaian Sengketa
+          </a>
+          <a href="#" style="display:flex;gap:10px;padding:10px 6px;font-size:13.5px;color:var(--gray-700);text-decoration:none;" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--gray-700)'">
+            <i class="fa fa-file-pdf" style="color:var(--orange);width:18px;"></i> SOP PPID Lengkap
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-card ikm-card">
+      <div class="sidebar-card-header"><i class="fa fa-phone-alt"></i> Kontak PPID</div>
+      <div class="kontak-list">
+        <div class="kontak-item"><i class="fa fa-phone"></i><span>(021) 5303540 ext. 102</span></div>
+        <div class="kontak-item"><i class="fa fa-envelope"></i><span>ppid.petamburan@jakarta.go.id</span></div>
+        <div class="kontak-item"><i class="fa fa-clock"></i><span>Senin–Jumat, 08.00–16.00 WIB</span></div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col brand">
+      <div class="footer-brand">
+        <div class="footer-brand-text">
+          <strong>Kelurahan Petamburan</strong>
+          <span>Kecamatan Tanah Abang, Jakarta Pusat</span>
+        </div>
+      </div>
+      <p class="footer-desc">Melayani masyarakat dengan sepenuh hati, transparan, akuntabel, dan berintegritas.</p>
+      <div class="footer-sosmed">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="layanan.html">Pengantar KTP</a></li>
+        <li><a href="layanan.html">Kartu Keluarga</a></li>
+        <li><a href="layanan.html">Surat Domisili</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="perangkat.html">Perangkat</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <div class="footer-kontak">
+        <p><i class="fa fa-map-marker-alt"></i> Jl. KS Tubun No.1, Jakarta Pusat</p>
+        <p><i class="fa fa-phone"></i> (021) 5303540</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kelurahan Petamburan – Pemerintah Provinsi DKI Jakarta</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

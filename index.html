@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kelurahan Petamburan – Kecamatan Tanah Abang, Jakarta Pusat</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Primary CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Fallback CDNs -->
+  <script>
+    // Check if Font Awesome loaded, if not use alternate CDN
+    window.addEventListener('load', function() {
+      const testIcon = window.getComputedStyle(document.querySelector('.fa'), '::before').getPropertyValue('font-family');
+      if (!testIcon.includes('Font Awesome')) {
+        const fallbackFA = document.createElement('link');
+        fallbackFA.rel = 'stylesheet';
+        fallbackFA.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+        document.head.appendChild(fallbackFA);
+      }
+    });
+  </script>
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<div class="a11y-widget" id="a11yWidget">
+  <button class="a11y-toggle" id="a11yToggle" aria-label="Buka Menu Aksesibilitas" title="Menu Aksesibilitas (CTRL+U)">
+    <i class="fa fa-universal-access"></i>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yTitle" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3 id="a11yTitle"><i class="fa fa-universal-access"></i> Menu Aksesibilitas (CTRL+U)</h3>
+      <button class="a11y-close" id="a11yClose" aria-label="Tutup Menu"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="a11y-lang">
+      <i class="fa fa-globe"></i> Bahasa Indonesia (Indonesian)
+    </div>
+    <div class="a11y-grid">
+      <button class="a11y-btn" data-action="speech" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-volume-up"></i></div>
+        <span>Mode Suara</span>
+      </button>
+      <button class="a11y-btn" data-action="font-increase" aria-pressed="false">
+        <div class="a11y-icon"><span style="font-size:18px;font-weight:700;">T</span><span style="font-size:24px;font-weight:700;">T</span></div>
+        <span>Perbesar Teks</span>
+      </button>
+      <button class="a11y-btn" data-action="font-decrease" aria-pressed="false">
+        <div class="a11y-icon"><span style="font-size:24px;font-weight:700;">T</span><span style="font-size:18px;font-weight:700;">T</span></div>
+        <span>Perkecil Teks</span>
+      </button>
+      <button class="a11y-btn" data-action="grayscale" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-tint"></i></div>
+        <span>Skala Abu-Abu</span>
+      </button>
+      <button class="a11y-btn" data-action="contrast" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-adjust"></i></div>
+        <span>Kontras+</span>
+      </button>
+      <button class="a11y-btn" data-action="hide-images" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-image"></i><i class="fa fa-ban" style="position:absolute;font-size:28px;opacity:.7;"></i></div>
+        <span>Sembunyikan Gambar</span>
+      </button>
+      <button class="a11y-btn" data-action="text-align" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-align-justify"></i></div>
+        <span>Rata Tulisan</span>
+      </button>
+      <button class="a11y-btn" data-action="dyslexia" aria-pressed="false">
+        <div class="a11y-icon"><span style="font-size:28px;font-weight:700;font-family:'OpenDyslexic',sans-serif;">A</span></div>
+        <span>Tulisan Dapat Dibaca</span>
+      </button>
+      <button class="a11y-btn" data-action="line-height" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-text-height"></i></div>
+        <span>Tinggi Garis</span>
+      </button>
+      <button class="a11y-btn" data-action="pause-animation" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-hourglass-half"></i></div>
+        <span>Animasi Dijeda</span>
+      </button>
+      <button class="a11y-btn" data-action="big-cursor" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-mouse-pointer"></i></div>
+        <span>Kursor</span>
+      </button>
+      <button class="a11y-btn" data-action="letter-spacing" aria-pressed="false">
+        <div class="a11y-icon"><span style="font-size:18px;font-weight:700;letter-spacing:6px;">T T</span></div>
+        <span>Spasi Teks</span>
+      </button>
+      <button class="a11y-btn" data-action="underline-links" aria-pressed="false">
+        <div class="a11y-icon"><i class="fa fa-underline"></i></div>
+        <span>Garis Bawahi Tautan</span>
+      </button>
+      <button class="a11y-btn a11y-reset" data-action="reset">
+        <div class="a11y-icon"><i class="fa fa-undo"></i></div>
+        <span>Reset Semua</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="fa fa-clock"></i> Jam Layanan: Senin–Jumat, 08.00–16.00 WIB</span>
+      <span><i class="fa fa-phone"></i> (021) 5303540</span>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-header-btn" id="a11yHeaderBtn" title="Menu Aksesibilitas (CTRL+U)" aria-label="Buka Menu Aksesibilitas">
+        <i class="fa fa-universal-access"></i>
+      </button>
+      <span id="clock-date"></span>
+      <a href="#" class="lang active">ID</a>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="assets/img/logo-dki.svg" alt="Logo DKI" class="logo-dki"/>
+      <div class="brand-text">
+        <span class="brand-sub">Pemerintah Provinsi DKI Jakarta</span>
+        <span class="brand-name">Kelurahan Petamburan</span>
+        <span class="brand-info">Kecamatan Tanah Abang · Jakarta Pusat</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="active"><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="has-dropdown">
+          <a href="#">Perangkat <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="perangkat.html">Struktur Organisasi</a></li>
+            <li><a href="perangkat.html#pejabat">Daftar Pejabat</a></li>
+            <li><a href="perangkat.html#tugas">Tugas dan Fungsi</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Layanan <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="layanan.html">Maklumat Layanan</a></li>
+            <li><a href="layanan.html#jenis">Jenis Pelayanan</a></li>
+            <li><a href="layanan.html#jam">Jam Pelayanan</a></li>
+            <li><a href="layanan.html#ikm">Nilai IKM</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Informasi <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="informasi.html">Agenda Kelurahan</a></li>
+            <li><a href="informasi.html#prestasi">Prestasi</a></li>
+            <li><a href="informasi.html#infografis">Infografis</a></li>
+            <li><a href="informasi.html#potensi">Potensi Kelurahan</a></li>
+          </ul>
+        </li>
+        <li><a href="pengaduan.html"><i class="fa fa-bullhorn"></i> Pengaduan</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO / SLIDER ===== -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('assets/img/hero1.svg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-tag"><i class="fa fa-star"></i> Berita Terkini</span>
+        <h1>Musrenbang 2026: 48 Usulan Warga Dibahas Bersama</h1>
+        <p>Kelurahan Petamburan menggelar Forum Musrenbang untuk membahas prioritas pembangunan wilayah bersama seluruh elemen masyarakat.</p>
+        <a href="#" class="btn-hero">Baca Selengkapnya <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('assets/img/hero2.svg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-tag"><i class="fa fa-mosque"></i> Kegiatan</span>
+        <h1>Sambut Ramadan, Kelurahan Gelar Bersih-Bersih Masjid</h1>
+        <p>Jajaran Kelurahan Petamburan bersama 3 pilar melaksanakan kegiatan bersih-bersih Masjid Arrahman menyambut bulan suci Ramadan.</p>
+        <a href="#" class="btn-hero">Baca Selengkapnya <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="hero-slide" style="background-image:url('assets/img/hero3.svg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-tag"><i class="fa fa-users"></i> PKK</span>
+        <h1>60 Kader PKK Ikuti Pelatihan Makanan Sehat & Bergizi</h1>
+        <p>Program peningkatan kapasitas kader PKK Kelurahan Petamburan dalam bidang gizi dan ketahanan pangan keluarga.</p>
+        <a href="#" class="btn-hero">Baca Selengkapnya <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-controls">
+    <button class="hero-btn prev" id="heroPrev"><i class="fa fa-chevron-left"></i></button>
+    <div class="hero-dots">
+      <span class="dot active" data-idx="0"></span>
+      <span class="dot" data-idx="1"></span>
+      <span class="dot" data-idx="2"></span>
+    </div>
+    <button class="hero-btn next" id="heroNext"><i class="fa fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <i class="fa fa-map-marked-alt"></i>
+      <div>
+        <span class="stat-num">90,10</span>
+        <span class="stat-label">Hektar Luas Wilayah</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="fa fa-layer-group"></i>
+      <div>
+        <span class="stat-num">11</span>
+        <span class="stat-label">Rukun Warga (RW)</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="fa fa-home"></i>
+      <div>
+        <span class="stat-num">116</span>
+        <span class="stat-label">Rukun Tetangga (RT)</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="fa fa-users"></i>
+      <div>
+        <span class="stat-num">42.500+</span>
+        <span class="stat-label">Jiwa Penduduk</span>
+      </div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <i class="fa fa-star"></i>
+      <div>
+        <span class="stat-num">96,4</span>
+        <span class="stat-label">Nilai IKM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-wrapper">
+  <div class="main-content">
+
+    <!-- BERITA TERBARU -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Terkini</span>
+          <h2 class="section-title">Berita & Pengumuman</h2>
+        </div>
+        <a href="#" class="btn-all">Lihat Semua <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="news-grid">
+        <!-- Card 1 (featured) -->
+        <article class="news-card featured">
+          <div class="news-img" style="background-image:url('assets/img/news1.svg')">
+            <span class="news-cat kegiatan">Kegiatan</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date"><i class="fa fa-calendar"></i> 07 Februari 2026</span>
+            <h3><a href="#">Kelurahan Petamburan Laksanakan Forum Musrenbang Membahas 48 Usulan Warga</a></h3>
+            <p>Forum Musyawarah Perencanaan Pembangunan (Musrenbang) Kelurahan Petamburan tahun 2026 resmi diselenggarakan dengan membahas sebanyak 48 usulan prioritas dari warga...</p>
+            <a href="#" class="btn-read">Selengkapnya <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="news-card">
+          <div class="news-img" style="background-image:url('assets/img/news2.svg')">
+            <span class="news-cat sosial">Sosial</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date"><i class="fa fa-calendar"></i> 06 Februari 2026</span>
+            <h3><a href="#">Sambut Ramadan, Jajaran Kelurahan Bersih-Bersih Masjid Arrahman</a></h3>
+            <p>Kegiatan bersih-bersih masjid sebagai bentuk persiapan menyambut bulan suci Ramadan 1447H bersama 3 pilar kelurahan...</p>
+            <a href="#" class="btn-read">Selengkapnya <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="news-card">
+          <div class="news-img" style="background-image:url('assets/img/news3.svg')">
+            <span class="news-cat pkk">PKK</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date"><i class="fa fa-calendar"></i> 27 Januari 2026</span>
+            <h3><a href="#">60 Kader PKK Ikuti Pelatihan Membuat Makanan Sehat dan Bergizi</a></h3>
+            <p>Program pelatihan intensif bagi kader PKK kelurahan dalam rangka meningkatkan pengetahuan gizi dan ketahanan pangan...</p>
+            <a href="#" class="btn-read">Selengkapnya <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="news-card">
+          <div class="news-img" style="background-image:url('assets/img/news4.svg')">
+            <span class="news-cat pemerintahan">Pemerintahan</span>
+          </div>
+          <div class="news-body">
+            <span class="news-date"><i class="fa fa-calendar"></i> 19 Desember 2025</span>
+            <h3><a href="#">Sebanyak 14 Ketua TP PKK Kelurahan Resmi Dilantik</a></h3>
+            <p>Pelantikan Ketua Tim Penggerak PKK tingkat kelurahan se-Kecamatan Tanah Abang dilaksanakan secara resmi...</p>
+            <a href="#" class="btn-read">Selengkapnya <i class="fa fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LAYANAN PUBLIK QUICK ACCESS -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Publik</span>
+          <h2 class="section-title">Layanan Kelurahan</h2>
+        </div>
+        <a href="layanan.html" class="btn-all">Lihat Semua <i class="fa fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-grid">
+        <a href="layanan.html#ktp" class="service-card">
+          <div class="service-icon"><i class="fa fa-id-card"></i></div>
+          <h4>Surat Pengantar KTP</h4>
+          <p>Pengantar untuk pembuatan & perubahan data KTP elektronik</p>
+          <span class="service-arrow"><i class="fa fa-arrow-right"></i></span>
+        </a>
+        <a href="layanan.html#kk" class="service-card">
+          <div class="service-icon"><i class="fa fa-users"></i></div>
+          <h4>Kartu Keluarga</h4>
+          <p>Penambahan anggota keluarga, perubahan data KK</p>
+          <span class="service-arrow"><i class="fa fa-arrow-right"></i></span>
+        </a>
+        <a href="layanan.html#skd" class="service-card">
+          <div class="service-icon"><i class="fa fa-file-alt"></i></div>
+          <h4>Surat Keterangan Domisili</h4>
+          <p>Surat keterangan tempat tinggal untuk berbagai keperluan</p>
+          <span class="service-arrow"><i class="fa fa-arrow-right"></i></span>
+        </a>
+        <a href="layanan.html#sktt" class="service-card">
+          <div class="service-icon"><i class="fa fa-file-signature"></i></div>
+          <h4>Surat Keterangan Tidak Mampu</h4>
+          <p>SKTM untuk keperluan bantuan sosial dan pendidikan</p>
+          <span class="service-arrow"><i class="fa fa-arrow-right"></i></span>
+        </a>
+        <a href="layanan.html#akta" class="service-card">
+          <div class="service-icon"><i class="fa fa-baby"></i></div>
+          <h4>Pengantar Akta Kelahiran</h4>
+          <p>Surat pengantar untuk penerbitan akta kelahiran</p>
+          <span class="service-arrow"><i class="fa fa-arrow-right"></i></span>
+        </a>
+        <a href="layanan.html#usaha" class="service-card">
+          <div class="service-icon"><i class="fa fa-store"></i></div>
+          <h4>Izin Usaha Mikro</h4>
+          <p>Pengantar penerbitan Nomor Induk Berusaha (NIB)</p>
+          <span class="service-arrow"><i class="fa fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Jadwal</span>
+          <h2 class="section-title">Agenda Kelurahan</h2>
+        </div>
+        <a href="informasi.html#agenda" class="btn-all">Lihat Semua <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="agenda-list">
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">25</span>
+            <span class="agenda-month">Feb</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Rapat Koordinasi Perangkat Kelurahan</h4>
+            <p><i class="fa fa-clock"></i> 09.00 – 11.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Aula Kelurahan Petamburan</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">27</span>
+            <span class="agenda-month">Feb</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Posyandu Balita RW 03 & RW 07</h4>
+            <p><i class="fa fa-clock"></i> 08.00 – 12.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Pos Kesehatan RW 03</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">05</span>
+            <span class="agenda-month">Mar</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Sosialisasi Program Bantuan Sosial 2026</h4>
+            <p><i class="fa fa-clock"></i> 13.00 – 15.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Balai Warga RW 05</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-date">
+            <span class="agenda-day">10</span>
+            <span class="agenda-month">Mar</span>
+            <span class="agenda-year">2026</span>
+          </div>
+          <div class="agenda-info">
+            <h4>Kegiatan Jumat Bersih – Gotong Royong Warga</h4>
+            <p><i class="fa fa-clock"></i> 07.00 – 09.00 WIB &nbsp;|&nbsp; <i class="fa fa-map-marker-alt"></i> Seluruh Wilayah RT/RW</p>
+          </div>
+          <span class="agenda-badge akan-datang">Akan Datang</span>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.main-content -->
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <!-- Profil Lurah -->
+    <div class="sidebar-card lurah-card">
+      <div class="lurah-photo-wrap">
+        <div class="lurah-photo-bg">
+          <img src="assets/img/lurah.svg" alt="Lurah"/>
+        </div>
+      </div>
+      <div class="lurah-info">
+        <span class="lurah-label">Lurah Kelurahan Petamburan</span>
+        <h3>Rian Hermanu</h3>
+        <div class="lurah-links">
+          <a href="perangkat.html#lurah"><i class="fa fa-user"></i> Profil</a>
+          <a href="perangkat.html#lurah"><i class="fa fa-history"></i> Riwayat</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jam Layanan -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">
+        <i class="fa fa-clock"></i> Jam Pelayanan
+      </div>
+      <div class="jam-table">
+        <div class="jam-row">
+          <span>Senin – Kamis</span>
+          <span class="jam-time">08.00 – 16.00</span>
+        </div>
+        <div class="jam-row">
+          <span>Jumat</span>
+          <span class="jam-time">08.00 – 16.30</span>
+        </div>
+        <div class="jam-row weekend">
+          <span>Sabtu – Minggu</span>
+          <span class="jam-time closed">Libur</span>
+        </div>
+        <div class="jam-note">
+          <i class="fa fa-info-circle"></i> Istirahat: 12.00 – 13.00 WIB
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontak Cepat -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">
+        <i class="fa fa-phone-alt"></i> Kontak Kami
+      </div>
+      <div class="kontak-list">
+        <a href="tel:02153035403" class="kontak-item">
+          <i class="fa fa-phone"></i>
+          <span>(021) 5303540</span>
+        </a>
+        <a href="mailto:kel.petamburan@jakarta.go.id" class="kontak-item">
+          <i class="fa fa-envelope"></i>
+          <span>kel.petamburan@jakarta.go.id</span>
+        </a>
+        <a href="#" class="kontak-item">
+          <i class="fab fa-whatsapp"></i>
+          <span>0812-1234-5678 (WA)</span>
+        </a>
+        <a href="#" class="kontak-item">
+          <i class="fa fa-map-marker-alt"></i>
+          <span>Jl. KS Tubun No.1, Jakarta Pusat</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Link Eksternal -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">
+        <i class="fa fa-link"></i> Tautan Terkait
+      </div>
+      <div class="link-ext-list">
+        <a href="https://jakarta.go.id" target="_blank" class="link-ext-item">
+          <i class="fa fa-globe"></i> Portal Jakarta
+        </a>
+        <a href="https://jakpus.jakarta.go.id" target="_blank" class="link-ext-item">
+          <i class="fa fa-city"></i> Jakarta Pusat
+        </a>
+        <a href="#" class="link-ext-item">
+          <i class="fa fa-briefcase"></i> Kecamatan Tanah Abang
+        </a>
+        <a href="https://dukcapil.jakarta.go.id" target="_blank" class="link-ext-item">
+          <i class="fa fa-id-card"></i> Dukcapil DKI
+        </a>
+        <a href="#" class="link-ext-item">
+          <i class="fa fa-landmark"></i> Pengadilan Negeri
+        </a>
+      </div>
+    </div>
+
+    <!-- IKM Widget -->
+    <div class="sidebar-card ikm-card">
+      <div class="sidebar-card-header">
+        <i class="fa fa-chart-bar"></i> Indeks Kepuasan Masyarakat
+      </div>
+      <div class="ikm-body">
+        <div class="ikm-score">96,4</div>
+        <div class="ikm-bar-wrap">
+          <div class="ikm-bar" style="width:96.4%"></div>
+        </div>
+        <div class="ikm-label">Sangat Baik · Semester I 2025</div>
+      </div>
+    </div>
+
+  </aside>
+</div><!-- /.main-wrapper -->
+
+<!-- ===== BANNER PPID ===== -->
+<section class="ppid-banner">
+  <div class="ppid-banner-inner">
+    <div class="ppid-banner-text">
+      <i class="fa fa-shield-alt"></i>
+      <div>
+        <h3>Keterbukaan Informasi Publik (PPID)</h3>
+        <p>Ajukan permohonan informasi atau keberatan secara online melalui layanan PPID Kelurahan Petamburan</p>
+      </div>
+    </div>
+    <div class="ppid-banner-actions">
+      <a href="ppid.html#form-permohonan" class="btn-ppid primary">Form Permohonan</a>
+      <a href="ppid.html#form-keberatan" class="btn-ppid secondary">Form Keberatan</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col brand">
+      <div class="footer-brand">
+        <div class="footer-brand-text">
+          <strong>Kelurahan Petamburan</strong>
+          <span>Kecamatan Tanah Abang, Jakarta Pusat</span>
+          <span>Provinsi DKI Jakarta</span>
+        </div>
+      </div>
+      <p class="footer-desc">Melayani masyarakat dengan sepenuh hati, transparan, akuntabel, dan berintegritas untuk Jakarta yang lebih baik.</p>
+      <div class="footer-sosmed">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#">Pengantar KTP</a></li>
+        <li><a href="#">Kartu Keluarga</a></li>
+        <li><a href="#">Surat Domisili</a></li>
+        <li><a href="#">SKTM</a></li>
+        <li><a href="#">Izin Usaha Mikro</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="#">Profil Kelurahan</a></li>
+        <li><a href="#">Perangkat Kelurahan</a></li>
+        <li><a href="#">Agenda Kegiatan</a></li>
+        <li><a href="#">Prestasi</a></li>
+        <li><a href="#">Potensi Wilayah</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>PPID</h4>
+      <ul>
+        <li><a href="#">Informasi Publik</a></li>
+        <li><a href="#">Permohonan Informasi</a></li>
+        <li><a href="#">Pengajuan Keberatan</a></li>
+        <li><a href="#">Prosedur Layanan</a></li>
+        <li><a href="#">SOP PPID</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <div class="footer-kontak">
+        <p><i class="fa fa-map-marker-alt"></i> Jl. KS Tubun No.1, Petamburan, Tanah Abang, Jakarta Pusat 10260</p>
+        <p><i class="fa fa-phone"></i> (021) 5303540</p>
+        <p><i class="fa fa-envelope"></i> kel.petamburan@jakarta.go.id</p>
+        <p><i class="fa fa-clock"></i> Senin–Jumat, 08.00–16.00 WIB</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kelurahan Petamburan – Pemerintah Provinsi DKI Jakarta. All rights reserved.</span>
+    <span>Dibangun oleh Tim IT Pemprov DKI Jakarta</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

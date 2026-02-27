@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFF3E0"/><stop offset="100%" stop-color="#FFE0B2"/></linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg)" rx="12"/>
+  <!-- Shop/Store -->
+  <rect x="100" y="85" width="80" height="60" rx="4" fill="#FFF" stroke="#E65100" stroke-width="2"/>
+  <rect x="100" y="75" width="80" height="15" rx="3" fill="#E65100"/>
+  <rect x="115" y="110" width="20" height="35" rx="2" fill="#FFB74D" stroke="#E65100" stroke-width="1.5"/>
+  <rect x="148" y="100" width="22" height="15" rx="2" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+  <!-- Sewing machine -->
+  <rect x="230" y="100" width="55" height="40" rx="6" fill="#FFF" stroke="#E65100" stroke-width="2"/>
+  <circle cx="257" cy="140" r="8" fill="none" stroke="#E65100" stroke-width="2"/>
+  <path d="M240 100c0-15 10-25 20-25" fill="none" stroke="#E65100" stroke-width="2"/>
+  <circle cx="260" cy="75" r="5" fill="#E65100"/>
+  <!-- Food bowl -->
+  <ellipse cx="320" cy="115" rx="25" ry="12" fill="#FFB74D" stroke="#E65100" stroke-width="2"/>
+  <path d="M295 115c0 14 11 25 25 25s25-11 25-25" fill="none" stroke="#E65100" stroke-width="2"/>
+  <path d="M315 105c3-10 10-10 10 0" fill="none" stroke="#E65100" stroke-width="2"/>
+  <!-- Banner -->
+  <rect x="115" y="160" width="170" height="26" rx="13" fill="#E65100"/>
+  <text x="200" y="178" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="12" fill="#FFF">187 UMKM Aktif</text>
+</svg>

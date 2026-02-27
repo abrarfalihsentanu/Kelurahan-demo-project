@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFF3E0"/><stop offset="100%" stop-color="#FFCCBC"/></linearGradient>
+    <linearGradient id="trophy" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFD54F"/><stop offset="100%" stop-color="#FF8F00"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)" rx="12"/>
+  <!-- Trophy -->
+  <path d="M170 70h60v40c0 22-13 38-30 42-17-4-30-20-30-42V70z" fill="url(#trophy)" stroke="#E65100" stroke-width="2"/>
+  <rect x="185" y="152" width="30" height="20" rx="3" fill="#E65100"/>
+  <rect x="175" y="170" width="50" height="8" rx="4" fill="#E65100"/>
+  <!-- Handles -->
+  <path d="M170 80c-15 0-28 12-28 28s13 28 28 28" fill="none" stroke="#E65100" stroke-width="3"/>
+  <path d="M230 80c15 0 28 12 28 28s-13 28-28 28" fill="none" stroke="#E65100" stroke-width="3"/>
+  <!-- Star -->
+  <polygon points="200,82 206,98 223,98 209,108 214,124 200,114 186,124 191,108 177,98 194,98" fill="#FFF" opacity=".9"/>
+  <!-- #1 badge -->
+  <circle cx="200" cy="200" r="18" fill="#C0392B"/>
+  <text x="200" y="206" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="16" fill="#FFF">#1</text>
+  <!-- Sparkles -->
+  <circle cx="130" cy="60" r="4" fill="#FFD54F" opacity=".7"/><circle cx="275" cy="55" r="3" fill="#FFD54F" opacity=".6"/>
+  <circle cx="310" cy="100" r="5" fill="#FFAB40" opacity=".5"/><circle cx="95" cy="130" r="3" fill="#FFAB40" opacity=".5"/>
+</svg>

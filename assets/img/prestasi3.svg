@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E3F2FD"/><stop offset="100%" stop-color="#BBDEFB"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)" rx="12"/>
+  <!-- Medal -->
+  <circle cx="200" cy="110" r="42" fill="#1565C0" opacity=".12"/>
+  <path d="M185 55l15 25 15-25" fill="none" stroke="#1565C0" stroke-width="3"/>
+  <path d="M180 55h40" stroke="#1565C0" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="200" cy="110" r="32" fill="#FFF" stroke="#1565C0" stroke-width="3"/>
+  <circle cx="200" cy="110" r="25" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5"/>
+  <!-- Star inside medal -->
+  <polygon points="200,91 206,104 220,104 209,112 213,126 200,118 187,126 191,112 180,104 194,104" fill="#1565C0" opacity=".7"/>
+  <!-- Score -->
+  <text x="200" y="175" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="28" fill="#1565C0">96,4</text>
+  <text x="200" y="198" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="600" font-size="12" fill="#1565C0" opacity=".8">SANGAT BAIK</text>
+  <!-- Bar -->
+  <rect x="135" y="210" width="130" height="8" rx="4" fill="#BBDEFB"/>
+  <rect x="135" y="210" width="125" height="8" rx="4" fill="#1565C0"/>
+</svg>

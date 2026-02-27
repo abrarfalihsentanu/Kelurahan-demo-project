@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E8F5E9"/><stop offset="100%" stop-color="#C8E6C9"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)" rx="12"/>
+  <!-- Leaf / Clean Environment -->
+  <circle cx="200" cy="115" r="55" fill="#43A047" opacity=".15"/>
+  <path d="M175 130c0-40 25-70 55-80-5 30-20 55-40 65" fill="#66BB6A" stroke="#2E7D32" stroke-width="2"/>
+  <path d="M185 125c0-30 15-52 35-60-3 22-12 40-25 48" fill="#A5D6A7" stroke="#388E3C" stroke-width="1.5"/>
+  <line x1="180" y1="128" x2="215" y2="80" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <!-- House -->
+  <rect x="165" y="140" width="30" height="25" rx="2" fill="#FFF" stroke="#2E7D32" stroke-width="2"/>
+  <polygon points="162,142 180,126 198,142" fill="#43A047" stroke="#2E7D32" stroke-width="2"/>
+  <rect x="174" y="150" width="10" height="15" rx="1" fill="#2E7D32"/>
+  <!-- Sparkle / Stars -->
+  <circle cx="240" cy="75" r="6" fill="#FFD54F"/><circle cx="260" cy="90" r="4" fill="#FFD54F" opacity=".7"/>
+  <circle cx="145" cy="85" r="3" fill="#FFD54F" opacity=".6"/>
+  <!-- Banner -->
+  <rect x="140" y="185" width="120" height="28" rx="14" fill="#2E7D32"/>
+  <text x="200" y="204" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="12" fill="#FFF">Juara I Bersih</text>
+</svg>

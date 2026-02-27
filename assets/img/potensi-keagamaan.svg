@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#E0F2F1"/><stop offset="100%" stop-color="#B2DFDB"/></linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg)" rx="12"/>
+  <!-- Mosque -->
+  <rect x="150" y="90" width="100" height="60" rx="3" fill="#FFF" stroke="#00695C" stroke-width="2"/>
+  <!-- Dome -->
+  <path d="M170 90c0-25 15-40 30-40s30 15 30 40" fill="#00695C"/>
+  <circle cx="200" cy="50" r="5" fill="#FFD54F"/>
+  <!-- Minaret left -->
+  <rect x="140" y="70" width="14" height="80" rx="2" fill="#FFF" stroke="#00695C" stroke-width="1.5"/>
+  <circle cx="147" cy="68" r="7" fill="#00695C"/><circle cx="147" cy="68" r="3" fill="#FFD54F"/>
+  <!-- Minaret right -->
+  <rect x="246" y="70" width="14" height="80" rx="2" fill="#FFF" stroke="#00695C" stroke-width="1.5"/>
+  <circle cx="253" cy="68" r="7" fill="#00695C"/><circle cx="253" cy="68" r="3" fill="#FFD54F"/>
+  <!-- Door -->
+  <path d="M190 150v-25c0-8 5-15 10-15s10 7 10 15v25" fill="#00695C"/>
+  <!-- Church cross (tolerance) -->
+  <line x1="310" y1="80" x2="310" y2="115" stroke="#5D4037" stroke-width="3"/>
+  <line x1="300" y1="92" x2="320" y2="92" stroke="#5D4037" stroke-width="3"/>
+  <rect x="295" y="115" width="30" height="35" rx="4" fill="#FFF" stroke="#5D4037" stroke-width="1.5"/>
+  <!-- Stars (tolerance) -->
+  <circle cx="88" cy="85" r="3" fill="#FFD54F"/><circle cx="100" cy="100" r="4" fill="#FFD54F" opacity=".7"/>
+  <!-- Banner -->
+  <rect x="120" y="164" width="160" height="24" rx="12" fill="#00695C"/>
+  <text x="200" y="180" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="700" font-size="11" fill="#FFF">Kerukunan Umat Beragama</text>
+</svg>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perangkat Kelurahan – Kelurahan Petamburan</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- Primary CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<div class="a11y-widget" id="a11yWidget">
+  <button class="a11y-toggle" id="a11yToggle" aria-label="Buka Menu Aksesibilitas" title="Menu Aksesibilitas (CTRL+U)">
+    <i class="fa fa-universal-access"></i>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yTitle" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3 id="a11yTitle"><i class="fa fa-universal-access"></i> Menu Aksesibilitas (CTRL+U)</h3>
+      <button class="a11y-close" id="a11yClose" aria-label="Tutup Menu"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="a11y-lang"><i class="fa fa-globe"></i> Bahasa Indonesia (Indonesian)</div>
+    <div class="a11y-grid">
+      <button class="a11y-btn" data-action="speech" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-volume-up"></i></div><span>Mode Suara</span></button>
+      <button class="a11y-btn" data-action="font-increase" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;">T</span><span style="font-size:24px;font-weight:700;">T</span></div><span>Perbesar Teks</span></button>
+      <button class="a11y-btn" data-action="font-decrease" aria-pressed="false"><div class="a11y-icon"><span style="font-size:24px;font-weight:700;">T</span><span style="font-size:18px;font-weight:700;">T</span></div><span>Perkecil Teks</span></button>
+      <button class="a11y-btn" data-action="grayscale" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-tint"></i></div><span>Skala Abu-Abu</span></button>
+      <button class="a11y-btn" data-action="contrast" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-adjust"></i></div><span>Kontras+</span></button>
+      <button class="a11y-btn" data-action="hide-images" aria-pressed="false"><div class="a11y-icon" style="position:relative;"><i class="fa fa-image"></i><i class="fa fa-ban" style="position:absolute;font-size:28px;opacity:.7;"></i></div><span>Sembunyikan Gambar</span></button>
+      <button class="a11y-btn" data-action="text-align" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-align-justify"></i></div><span>Rata Tulisan</span></button>
+      <button class="a11y-btn" data-action="dyslexia" aria-pressed="false"><div class="a11y-icon"><span style="font-size:28px;font-weight:700;">A</span></div><span>Tulisan Dapat Dibaca</span></button>
+      <button class="a11y-btn" data-action="line-height" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-text-height"></i></div><span>Tinggi Garis</span></button>
+      <button class="a11y-btn" data-action="pause-animation" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-hourglass-half"></i></div><span>Animasi Dijeda</span></button>
+      <button class="a11y-btn" data-action="big-cursor" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-mouse-pointer"></i></div><span>Kursor</span></button>
+      <button class="a11y-btn" data-action="letter-spacing" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;letter-spacing:6px;">T T</span></div><span>Spasi Teks</span></button>
+      <button class="a11y-btn" data-action="underline-links" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-underline"></i></div><span>Garis Bawahi Tautan</span></button>
+      <button class="a11y-btn a11y-reset" data-action="reset"><div class="a11y-icon"><i class="fa fa-undo"></i></div><span>Reset Semua</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="fa fa-clock"></i> Jam Layanan: Senin–Jumat, 08.00–16.00 WIB</span>
+      <span><i class="fa fa-phone"></i> (021) 5303540</span>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-header-btn" id="a11yHeaderBtn" title="Menu Aksesibilitas (CTRL+U)" aria-label="Buka Menu Aksesibilitas">
+        <i class="fa fa-universal-access"></i>
+      </button>
+      <span id="clock-date"></span>
+      <a href="#" class="lang active">ID</a>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="assets/img/logo-dki.svg" alt="Logo DKI" class="logo-dki"/>
+      <div class="brand-text">
+        <span class="brand-sub">Pemerintah Provinsi DKI Jakarta</span>
+        <span class="brand-name">Kelurahan Petamburan</span>
+        <span class="brand-info">Kecamatan Tanah Abang · Jakarta Pusat</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="has-dropdown active">
+          <a href="#">Perangkat <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="perangkat.html">Struktur Organisasi</a></li>
+            <li><a href="perangkat.html#pejabat">Daftar Pejabat</a></li>
+            <li><a href="perangkat.html#tugas">Tugas dan Fungsi</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown"><a href="#">Layanan <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="layanan.html">Jenis Pelayanan</a></li>
+            <li><a href="layanan.html#jam">Jam Pelayanan</a></li>
+          </ul>
+        </li>
+        <li><a href="informasi.html">Informasi</a></li>
+        <li><a href="pengaduan.html"><i class="fa fa-bullhorn"></i> Pengaduan</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner">
+  <div class="page-banner-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>Perangkat Kelurahan</span>
+    </div>
+    <h1><i class="fa fa-users-cog"></i> Perangkat Kelurahan</h1>
+    <p>Struktur organisasi dan susunan pejabat Kelurahan Petamburan yang melayani masyarakat.</p>
+  </div>
+</section>
+
+<div style="max-width:1320px;margin:0 auto;padding:44px 24px;">
+
+  <!-- STRUKTUR ORGANISASI -->
+  <section class="section-block">
+    <div class="section-header">
+      <div class="section-title-group">
+        <span class="section-badge">Organisasi</span>
+        <h2 class="section-title">Struktur Organisasi</h2>
+      </div>
+    </div>
+
+    <!-- Bagan Org -->
+    <div style="background:#fff;border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow-sm);overflow-x:auto;">
+      <div style="min-width:700px;">
+
+        <!-- Level 1: Lurah -->
+        <div style="display:flex;justify-content:center;margin-bottom:0;">
+          <div style="background:linear-gradient(135deg,var(--red),var(--red-mid));color:#fff;border-radius:12px;padding:16px 24px;text-align:center;min-width:200px;box-shadow:var(--shadow-md);">
+            <div style="font-size:28px;margin-bottom:6px;">👤</div>
+            <div style="font-weight:800;font-size:15px;">Rian Hermanu</div>
+            <div style="font-size:12px;opacity:.88;margin-top:3px;">Lurah</div>
+          </div>
+        </div>
+        <!-- Connector -->
+        <div style="display:flex;justify-content:center;"><div style="width:2px;height:30px;background:var(--gray-300);"></div></div>
+        <!-- Level 2: Sekretaris -->
+        <div style="display:flex;justify-content:center;margin-bottom:0;">
+          <div style="background:linear-gradient(135deg,var(--orange),var(--orange-light));color:#fff;border-radius:12px;padding:14px 22px;text-align:center;min-width:200px;box-shadow:var(--shadow-sm);">
+            <div style="font-size:24px;margin-bottom:5px;">👤</div>
+            <div style="font-weight:700;font-size:14px;">Siti Rahayu, S.E.</div>
+            <div style="font-size:12px;opacity:.9;margin-top:3px;">Sekretaris Kelurahan</div>
+          </div>
+        </div>
+        <!-- Horizontal Connector -->
+        <div style="display:flex;justify-content:center;"><div style="width:2px;height:30px;background:var(--gray-300);"></div></div>
+        <div style="display:flex;justify-content:center;margin-bottom:0;">
+          <div style="width:80%;height:2px;background:var(--gray-300);"></div>
+        </div>
+        <!-- Level 3: Kasi-kasi -->
+        <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+          <div>
+            <div style="display:flex;justify-content:center;"><div style="width:2px;height:20px;background:var(--gray-300);"></div></div>
+            <div style="background:#fff;border:2px solid var(--orange);border-radius:10px;padding:14px 18px;text-align:center;min-width:160px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:20px;margin-bottom:5px;">👤</div>
+              <div style="font-weight:700;font-size:13px;color:var(--gray-900);">Ahmad Fauzi</div>
+              <div style="font-size:11.5px;color:var(--gray-500);margin-top:3px;">Kasi Pemerintahan</div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:center;"><div style="width:2px;height:20px;background:var(--gray-300);"></div></div>
+            <div style="background:#fff;border:2px solid var(--orange);border-radius:10px;padding:14px 18px;text-align:center;min-width:160px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:20px;margin-bottom:5px;">👤</div>
+              <div style="font-weight:700;font-size:13px;color:var(--gray-900);">Dewi Kurniasih</div>
+              <div style="font-size:11.5px;color:var(--gray-500);margin-top:3px;">Kasi Ekbang</div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:center;"><div style="width:2px;height:20px;background:var(--gray-300);"></div></div>
+            <div style="background:#fff;border:2px solid var(--orange);border-radius:10px;padding:14px 18px;text-align:center;min-width:160px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:20px;margin-bottom:5px;">👤</div>
+              <div style="font-weight:700;font-size:13px;color:var(--gray-900);">Budi Santoso</div>
+              <div style="font-size:11.5px;color:var(--gray-500);margin-top:3px;">Kasi Kesra</div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:center;"><div style="width:2px;height:20px;background:var(--gray-300);"></div></div>
+            <div style="background:#fff;border:2px solid var(--orange);border-radius:10px;padding:14px 18px;text-align:center;min-width:160px;box-shadow:var(--shadow-sm);">
+              <div style="font-size:20px;margin-bottom:5px;">👤</div>
+              <div style="font-weight:700;font-size:13px;color:var(--gray-900);">Rini Wahyuni</div>
+              <div style="font-size:11.5px;color:var(--gray-500);margin-top:3px;">Kasi Tramtib</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DAFTAR PEJABAT -->
+  <section class="section-block" id="pejabat">
+    <div class="section-header">
+      <div class="section-title-group">
+        <span class="section-badge">Pejabat</span>
+        <h2 class="section-title">Daftar Pejabat Kelurahan</h2>
+      </div>
+    </div>
+    <div class="pejabat-table">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Foto</th>
+            <th>Nama Lengkap</th>
+            <th>Jabatan</th>
+            <th>NIP</th>
+            <th>Kontak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><div class="pejabat-photo" style="background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:20px;">👤</div></td>
+            <td><strong>Rian Hermanu, S.Sos., M.Si.</strong></td>
+            <td><span style="background:#FFEBEE;color:var(--red);padding:3px 10px;border-radius:30px;font-size:12px;font-weight:700;">Lurah</span></td>
+            <td>197808012005011003</td>
+            <td><a href="tel:021530354" style="color:var(--red);">(021) 5303540</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><div class="pejabat-photo" style="background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:20px;">👤</div></td>
+            <td><strong>Siti Rahayu, S.E.</strong></td>
+            <td><span style="background:#FFF3E0;color:var(--orange);padding:3px 10px;border-radius:30px;font-size:12px;font-weight:700;">Sekretaris</span></td>
+            <td>198201152007012008</td>
+            <td><a href="#" style="color:var(--red);">-</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><div class="pejabat-photo" style="background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:20px;">👤</div></td>
+            <td><strong>Ahmad Fauzi, S.AP.</strong></td>
+            <td><span style="background:#E8F5E9;color:#2E7D32;padding:3px 10px;border-radius:30px;font-size:12px;font-weight:700;">Kasi Pemerintahan</span></td>
+            <td>197911232006041002</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><div class="pejabat-photo" style="background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:20px;">👤</div></td>
+            <td><strong>Dewi Kurniasih, S.E.</strong></td>
+            <td><span style="background:#E3F2FD;color:#1565C0;padding:3px 10px;border-radius:30px;font-size:12px;font-weight:700;">Kasi Ekbang</span></td>
+            <td>198506282009012006</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><div class="pejabat-photo" style="background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:20px;">👤</div></td>
+            <td><strong>Budi Santoso, S.Sos.</strong></td>
+            <td><span style="background:#F3E5F5;color:#6A1B9A;padding:3px 10px;border-radius:30px;font-size:12px;font-weight:700;">Kasi Kesra</span></td>
+            <td>198002142004011003</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><div class="pejabat-photo" style="background:var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:20px;">👤</div></td>
+            <td><strong>Rini Wahyuni, S.H.</strong></td>
+            <td><span style="background:#FCE4EC;color:#880E4F;padding:3px 10px;border-radius:30px;font-size:12px;font-weight:700;">Kasi Tramtib</span></td>
+            <td>198809052011012005</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TUGAS DAN FUNGSI -->
+  <section class="section-block" id="tugas">
+    <div class="section-header">
+      <div class="section-title-group">
+        <span class="section-badge">Tupoksi</span>
+        <h2 class="section-title">Tugas dan Fungsi</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+      <div style="background:#fff;border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);border-left:4px solid var(--red);">
+        <h4 style="font-size:16px;font-weight:800;color:var(--red);margin-bottom:14px;"><i class="fa fa-user-tie"></i> Lurah</h4>
+        <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Memimpin dan mengoordinasikan seluruh kegiatan kelurahan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Membina dan mengawasi penyelenggaraan pemerintahan kelurahan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Melaksanakan urusan pemerintahan yang dilimpahkan camat</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Melaksanakan tugas lain yang diberikan oleh pimpinan</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);border-left:4px solid var(--orange);">
+        <h4 style="font-size:16px;font-weight:800;color:var(--orange);margin-bottom:14px;"><i class="fa fa-user-friends"></i> Sekretaris</h4>
+        <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Mengkoordinasikan penyusunan program kerja kelurahan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Mengelola administrasi umum, kepegawaian, dan keuangan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Memberikan dukungan administrasi kepada seluruh seksi</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Menyiapkan bahan laporan penyelenggaraan pemerintahan</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);border-left:4px solid #27AE60;">
+        <h4 style="font-size:16px;font-weight:800;color:#27AE60;margin-bottom:14px;"><i class="fa fa-landmark"></i> Kasi Pemerintahan</h4>
+        <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Melaksanakan administrasi kependudukan dan catatan sipil</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Memfasilitasi penyelenggaraan pemilihan RT/RW</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Mengelola buku administrasi kelurahan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Menyusun data monografi kelurahan</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);border-left:4px solid #2980B9;">
+        <h4 style="font-size:16px;font-weight:800;color:#2980B9;margin-bottom:14px;"><i class="fa fa-briefcase"></i> Kasi Ekbang</h4>
+        <ul style="display:flex;flex-direction:column;gap:8px;">
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Memfasilitasi kegiatan ekonomi dan pembangunan wilayah</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Melaksanakan musrenbang dan perencanaan pembangunan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Mendorong pengembangan UMKM di wilayah kelurahan</li>
+          <li style="font-size:13.5px;color:var(--gray-700);display:flex;gap:8px;"><span style="color:var(--orange);font-weight:700;">›</span> Memantau pelaksanaan pembangunan infrastruktur</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col brand">
+      <div class="footer-brand">
+        <div class="footer-brand-text">
+          <strong>Kelurahan Petamburan</strong>
+          <span>Kecamatan Tanah Abang, Jakarta Pusat</span>
+        </div>
+      </div>
+      <p class="footer-desc">Melayani masyarakat dengan sepenuh hati, transparan, akuntabel, dan berintegritas.</p>
+      <div class="footer-sosmed">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="layanan.html">Pengantar KTP</a></li>
+        <li><a href="layanan.html">Kartu Keluarga</a></li>
+        <li><a href="layanan.html">Surat Domisili</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <div class="footer-kontak">
+        <p><i class="fa fa-map-marker-alt"></i> Jl. KS Tubun No.1, Jakarta Pusat</p>
+        <p><i class="fa fa-phone"></i> (021) 5303540</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kelurahan Petamburan – Pemerintah Provinsi DKI Jakarta</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

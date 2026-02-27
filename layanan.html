@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layanan Publik – Kelurahan Petamburan</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!-- Primary CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=OpenDyslexic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY WIDGET ===== -->
+<div class="a11y-widget" id="a11yWidget">
+  <button class="a11y-toggle" id="a11yToggle" aria-label="Buka Menu Aksesibilitas" title="Menu Aksesibilitas (CTRL+U)">
+    <i class="fa fa-universal-access"></i>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-labelledby="a11yTitle" aria-hidden="true">
+    <div class="a11y-panel-header">
+      <h3 id="a11yTitle"><i class="fa fa-universal-access"></i> Menu Aksesibilitas (CTRL+U)</h3>
+      <button class="a11y-close" id="a11yClose" aria-label="Tutup Menu"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="a11y-lang"><i class="fa fa-globe"></i> Bahasa Indonesia (Indonesian)</div>
+    <div class="a11y-grid">
+      <button class="a11y-btn" data-action="speech" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-volume-up"></i></div><span>Mode Suara</span></button>
+      <button class="a11y-btn" data-action="font-increase" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;">T</span><span style="font-size:24px;font-weight:700;">T</span></div><span>Perbesar Teks</span></button>
+      <button class="a11y-btn" data-action="font-decrease" aria-pressed="false"><div class="a11y-icon"><span style="font-size:24px;font-weight:700;">T</span><span style="font-size:18px;font-weight:700;">T</span></div><span>Perkecil Teks</span></button>
+      <button class="a11y-btn" data-action="grayscale" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-tint"></i></div><span>Skala Abu-Abu</span></button>
+      <button class="a11y-btn" data-action="contrast" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-adjust"></i></div><span>Kontras+</span></button>
+      <button class="a11y-btn" data-action="hide-images" aria-pressed="false"><div class="a11y-icon" style="position:relative;"><i class="fa fa-image"></i><i class="fa fa-ban" style="position:absolute;font-size:28px;opacity:.7;"></i></div><span>Sembunyikan Gambar</span></button>
+      <button class="a11y-btn" data-action="text-align" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-align-justify"></i></div><span>Rata Tulisan</span></button>
+      <button class="a11y-btn" data-action="dyslexia" aria-pressed="false"><div class="a11y-icon"><span style="font-size:28px;font-weight:700;">A</span></div><span>Tulisan Dapat Dibaca</span></button>
+      <button class="a11y-btn" data-action="line-height" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-text-height"></i></div><span>Tinggi Garis</span></button>
+      <button class="a11y-btn" data-action="pause-animation" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-hourglass-half"></i></div><span>Animasi Dijeda</span></button>
+      <button class="a11y-btn" data-action="big-cursor" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-mouse-pointer"></i></div><span>Kursor</span></button>
+      <button class="a11y-btn" data-action="letter-spacing" aria-pressed="false"><div class="a11y-icon"><span style="font-size:18px;font-weight:700;letter-spacing:6px;">T T</span></div><span>Spasi Teks</span></button>
+      <button class="a11y-btn" data-action="underline-links" aria-pressed="false"><div class="a11y-icon"><i class="fa fa-underline"></i></div><span>Garis Bawahi Tautan</span></button>
+      <button class="a11y-btn a11y-reset" data-action="reset"><div class="a11y-icon"><i class="fa fa-undo"></i></div><span>Reset Semua</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span><i class="fa fa-clock"></i> Jam Layanan: Senin–Jumat, 08.00–16.00 WIB</span>
+      <span><i class="fa fa-phone"></i> (021) 5303540</span>
+    </div>
+    <div class="topbar-right">
+      <button class="a11y-header-btn" id="a11yHeaderBtn" title="Menu Aksesibilitas (CTRL+U)" aria-label="Buka Menu Aksesibilitas">
+        <i class="fa fa-universal-access"></i>
+      </button>
+      <span id="clock-date"></span>
+      <a href="#" class="lang active">ID</a>
+      <a href="#" class="lang">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <img src="assets/img/logo-dki.svg" alt="Logo DKI" class="logo-dki"/>
+      <div class="brand-text">
+        <span class="brand-sub">Pemerintah Provinsi DKI Jakarta</span>
+        <span class="brand-name">Kelurahan Petamburan</span>
+        <span class="brand-info">Kecamatan Tanah Abang · Jakarta Pusat</span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Beranda</a></li>
+        <li class="has-dropdown">
+          <a href="#">Perangkat <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="perangkat.html">Struktur Organisasi</a></li>
+            <li><a href="perangkat.html#pejabat">Daftar Pejabat</a></li>
+            <li><a href="perangkat.html#tugas">Tugas dan Fungsi</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown active">
+          <a href="#">Layanan <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="layanan.html">Maklumat Layanan</a></li>
+            <li><a href="layanan.html#jenis">Jenis Pelayanan</a></li>
+            <li><a href="layanan.html#jam">Jam Pelayanan</a></li>
+            <li><a href="layanan.html#ikm">Nilai IKM</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Informasi <i class="fa fa-chevron-down fa-xs"></i></a>
+          <ul class="dropdown">
+            <li><a href="informasi.html">Agenda Kelurahan</a></li>
+            <li><a href="informasi.html#prestasi">Prestasi</a></li>
+            <li><a href="informasi.html#infografis">Infografis</a></li>
+          </ul>
+        </li>
+        <li><a href="pengaduan.html"><i class="fa fa-bullhorn"></i> Pengaduan</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+  <div class="page-banner-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a>
+      <i class="fa fa-chevron-right"></i>
+      <span>Layanan Publik</span>
+    </div>
+    <h1><i class="fa fa-concierge-bell"></i> Layanan Publik</h1>
+    <p>Kelurahan Petamburan melayani berbagai kebutuhan administrasi kependudukan dan kemasyarakatan warga secara profesional, cepat, dan transparan.</p>
+  </div>
+</section>
+
+<!-- MAKLUMAT -->
+<div class="page-wrapper">
+  <div class="main-content">
+
+    <!-- MAKLUMAT CARD -->
+    <section class="section-block">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Komitmen</span>
+          <h2 class="section-title">Maklumat Layanan</h2>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,#fff 0%,#FEF3E2 100%); border:2px solid var(--orange); border-radius:var(--radius-lg); padding:28px 32px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex;gap:20px;align-items:flex-start;">
+          <div style="font-size:40px;color:var(--red);flex-shrink:0;">📜</div>
+          <div>
+            <h3 style="font-size:18px;font-weight:800;color:var(--gray-900);margin-bottom:10px;">Maklumat Pelayanan Kelurahan Petamburan</h3>
+            <p style="font-size:14.5px;color:var(--gray-700);line-height:1.8;font-style:italic;font-family:'Lora',serif;">
+              "Dengan ini, kami seluruh jajaran Kelurahan Petamburan menyatakan <strong>SANGGUP</strong> menyelenggarakan pelayanan sesuai standar pelayanan yang telah ditetapkan. Apabila tidak menepati janji ini, kami siap menerima sanksi sesuai peraturan perundang-undangan yang berlaku."
+            </p>
+            <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+              <span style="background:var(--red);color:#fff;padding:5px 14px;border-radius:30px;font-size:12.5px;font-weight:700;"><i class="fa fa-check"></i> Cepat & Tepat</span>
+              <span style="background:var(--orange);color:#fff;padding:5px 14px;border-radius:30px;font-size:12.5px;font-weight:700;"><i class="fa fa-check"></i> Transparan</span>
+              <span style="background:#27AE60;color:#fff;padding:5px 14px;border-radius:30px;font-size:12.5px;font-weight:700;"><i class="fa fa-check"></i> Akuntabel</span>
+              <span style="background:#2980B9;color:#fff;padding:5px 14px;border-radius:30px;font-size:12.5px;font-weight:700;"><i class="fa fa-check"></i> Gratis / Tidak Dipungut Biaya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JENIS LAYANAN -->
+    <section class="section-block" id="jenis">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Pelayanan</span>
+          <h2 class="section-title">Jenis Pelayanan</h2>
+        </div>
+      </div>
+
+      <div class="layanan-grid">
+
+        <div class="layanan-detail-card" id="ktp">
+          <div class="layanan-card-top">
+            <span class="icon"><i class="fa fa-id-card"></i></span>
+            <div>
+              <h3>Surat Pengantar KTP Elektronik</h3>
+              <small>Administrasi Kependudukan</small>
+            </div>
+          </div>
+          <div class="layanan-card-body">
+            <p class="layanan-req-title">Persyaratan Dokumen</p>
+            <ul class="layanan-req-list">
+              <li>Surat Pengantar dari RT/RW</li>
+              <li>Fotokopi Kartu Keluarga (KK)</li>
+              <li>Akta Kelahiran (jika ada)</li>
+              <li>Formulir F-1.01 (tersedia di kelurahan)</li>
+            </ul>
+            <div class="layanan-meta">
+              <span class="layanan-meta-item"><i class="fa fa-clock"></i> 1 Hari Kerja</span>
+              <span class="layanan-meta-item"><i class="fa fa-money-bill"></i> Gratis</span>
+              <span class="layanan-meta-item"><i class="fa fa-calendar"></i> Senin–Jumat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layanan-detail-card" id="kk">
+          <div class="layanan-card-top">
+            <span class="icon"><i class="fa fa-users"></i></span>
+            <div>
+              <h3>Perubahan Data Kartu Keluarga</h3>
+              <small>Administrasi Kependudukan</small>
+            </div>
+          </div>
+          <div class="layanan-card-body">
+            <p class="layanan-req-title">Persyaratan Dokumen</p>
+            <ul class="layanan-req-list">
+              <li>Surat Pengantar dari RT/RW</li>
+              <li>KK Asli yang akan diubah</li>
+              <li>Dokumen pendukung perubahan (akta nikah, akta lahir, dll)</li>
+              <li>Formulir F-1.05</li>
+            </ul>
+            <div class="layanan-meta">
+              <span class="layanan-meta-item"><i class="fa fa-clock"></i> 1–3 Hari Kerja</span>
+              <span class="layanan-meta-item"><i class="fa fa-money-bill"></i> Gratis</span>
+              <span class="layanan-meta-item"><i class="fa fa-calendar"></i> Senin–Jumat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layanan-detail-card" id="skd">
+          <div class="layanan-card-top">
+            <span class="icon"><i class="fa fa-file-alt"></i></span>
+            <div>
+              <h3>Surat Keterangan Domisili</h3>
+              <small>Administrasi Umum</small>
+            </div>
+          </div>
+          <div class="layanan-card-body">
+            <p class="layanan-req-title">Persyaratan Dokumen</p>
+            <ul class="layanan-req-list">
+              <li>Surat Pengantar dari RT/RW</li>
+              <li>Fotokopi KTP Elektronik</li>
+              <li>Fotokopi Kartu Keluarga</li>
+              <li>Surat pernyataan domisili bermaterai</li>
+            </ul>
+            <div class="layanan-meta">
+              <span class="layanan-meta-item"><i class="fa fa-clock"></i> Hari Sama</span>
+              <span class="layanan-meta-item"><i class="fa fa-money-bill"></i> Gratis</span>
+              <span class="layanan-meta-item"><i class="fa fa-calendar"></i> Senin–Jumat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layanan-detail-card" id="sktt">
+          <div class="layanan-card-top">
+            <span class="icon"><i class="fa fa-file-signature"></i></span>
+            <div>
+              <h3>Surat Keterangan Tidak Mampu (SKTM)</h3>
+              <small>Kesejahteraan Sosial</small>
+            </div>
+          </div>
+          <div class="layanan-card-body">
+            <p class="layanan-req-title">Persyaratan Dokumen</p>
+            <ul class="layanan-req-list">
+              <li>Surat Pengantar dari RT/RW</li>
+              <li>Fotokopi KTP & KK</li>
+              <li>Surat keterangan kondisi ekonomi dari RT</li>
+              <li>Dokumen keperluan (surat sekolah, RS, dll)</li>
+            </ul>
+            <div class="layanan-meta">
+              <span class="layanan-meta-item"><i class="fa fa-clock"></i> Hari Sama</span>
+              <span class="layanan-meta-item"><i class="fa fa-money-bill"></i> Gratis</span>
+              <span class="layanan-meta-item"><i class="fa fa-calendar"></i> Senin–Jumat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layanan-detail-card" id="akta">
+          <div class="layanan-card-top">
+            <span class="icon"><i class="fa fa-baby"></i></span>
+            <div>
+              <h3>Pengantar Akta Kelahiran</h3>
+              <small>Administrasi Kependudukan</small>
+            </div>
+          </div>
+          <div class="layanan-card-body">
+            <p class="layanan-req-title">Persyaratan Dokumen</p>
+            <ul class="layanan-req-list">
+              <li>Surat Keterangan Lahir dari RS/Bidan</li>
+              <li>Fotokopi KTP kedua orang tua</li>
+              <li>Fotokopi Buku Nikah / Akta Nikah</li>
+              <li>Fotokopi KK yang akan didaftarkan</li>
+            </ul>
+            <div class="layanan-meta">
+              <span class="layanan-meta-item"><i class="fa fa-clock"></i> 1 Hari Kerja</span>
+              <span class="layanan-meta-item"><i class="fa fa-money-bill"></i> Gratis</span>
+              <span class="layanan-meta-item"><i class="fa fa-calendar"></i> Senin–Jumat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layanan-detail-card" id="usaha">
+          <div class="layanan-card-top">
+            <span class="icon"><i class="fa fa-store"></i></span>
+            <div>
+              <h3>Rekomendasi Izin Usaha Mikro</h3>
+              <small>Ekonomi & Pembangunan</small>
+            </div>
+          </div>
+          <div class="layanan-card-body">
+            <p class="layanan-req-title">Persyaratan Dokumen</p>
+            <ul class="layanan-req-list">
+              <li>Surat Pengantar RT/RW mengetahui usaha</li>
+              <li>Fotokopi KTP Pemohon</li>
+              <li>Foto lokasi usaha</li>
+              <li>Surat pernyataan tidak mengganggu lingkungan</li>
+            </ul>
+            <div class="layanan-meta">
+              <span class="layanan-meta-item"><i class="fa fa-clock"></i> 1–2 Hari Kerja</span>
+              <span class="layanan-meta-item"><i class="fa fa-money-bill"></i> Gratis</span>
+              <span class="layanan-meta-item"><i class="fa fa-calendar"></i> Senin–Jumat</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JAM LAYANAN -->
+    <section class="section-block" id="jam">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Jadwal</span>
+          <h2 class="section-title">Jam Pelayanan</h2>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr style="background:linear-gradient(90deg,var(--red),var(--orange));color:#fff;">
+              <th style="padding:14px 20px;text-align:left;font-size:14px;">Hari</th>
+              <th style="padding:14px 20px;text-align:left;font-size:14px;">Jam Masuk</th>
+              <th style="padding:14px 20px;text-align:left;font-size:14px;">Istirahat</th>
+              <th style="padding:14px 20px;text-align:left;font-size:14px;">Jam Pulang</th>
+              <th style="padding:14px 20px;text-align:left;font-size:14px;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;">Senin</td>
+              <td style="padding:14px 20px;">08.00 WIB</td>
+              <td style="padding:14px 20px;">12.00 – 13.00 WIB</td>
+              <td style="padding:14px 20px;">16.00 WIB</td>
+              <td style="padding:14px 20px;"><span style="background:#E8F5E9;color:#2E7D32;padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Buka</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;">Selasa</td>
+              <td style="padding:14px 20px;">08.00 WIB</td>
+              <td style="padding:14px 20px;">12.00 – 13.00 WIB</td>
+              <td style="padding:14px 20px;">16.00 WIB</td>
+              <td style="padding:14px 20px;"><span style="background:#E8F5E9;color:#2E7D32;padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Buka</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;">Rabu</td>
+              <td style="padding:14px 20px;">08.00 WIB</td>
+              <td style="padding:14px 20px;">12.00 – 13.00 WIB</td>
+              <td style="padding:14px 20px;">16.00 WIB</td>
+              <td style="padding:14px 20px;"><span style="background:#E8F5E9;color:#2E7D32;padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Buka</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;">Kamis</td>
+              <td style="padding:14px 20px;">08.00 WIB</td>
+              <td style="padding:14px 20px;">12.00 – 13.00 WIB</td>
+              <td style="padding:14px 20px;">16.00 WIB</td>
+              <td style="padding:14px 20px;"><span style="background:#E8F5E9;color:#2E7D32;padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Buka</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;">Jumat</td>
+              <td style="padding:14px 20px;">08.00 WIB</td>
+              <td style="padding:14px 20px;">11.30 – 13.00 WIB</td>
+              <td style="padding:14px 20px;">16.30 WIB</td>
+              <td style="padding:14px 20px;"><span style="background:#E8F5E9;color:#2E7D32;padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Buka</span></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-100);background:var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;color:var(--gray-400);">Sabtu</td>
+              <td style="padding:14px 20px;color:var(--gray-400);">–</td>
+              <td style="padding:14px 20px;color:var(--gray-400);">–</td>
+              <td style="padding:14px 20px;color:var(--gray-400);">–</td>
+              <td style="padding:14px 20px;"><span style="background:var(--gray-200);color:var(--gray-400);padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Libur</span></td>
+            </tr>
+            <tr style="background:var(--gray-100);">
+              <td style="padding:14px 20px;font-weight:600;color:var(--gray-400);">Minggu</td>
+              <td style="padding:14px 20px;color:var(--gray-400);">–</td>
+              <td style="padding:14px 20px;color:var(--gray-400);">–</td>
+              <td style="padding:14px 20px;color:var(--gray-400);">–</td>
+              <td style="padding:14px 20px;"><span style="background:var(--gray-200);color:var(--gray-400);padding:4px 12px;border-radius:30px;font-size:12px;font-weight:700;">Libur</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- NILAI IKM -->
+    <section class="section-block" id="ikm">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-badge">Survei</span>
+          <h2 class="section-title">Nilai Indeks Kepuasan Masyarakat</h2>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:24px;">
+        <div style="background:linear-gradient(135deg,var(--red),var(--orange));border-radius:var(--radius-lg);padding:32px;text-align:center;color:#fff;">
+          <div style="font-size:72px;font-weight:800;line-height:1;">96,4</div>
+          <div style="font-size:16px;font-weight:700;margin-top:8px;">Nilai IKM</div>
+          <div style="font-size:14px;opacity:.88;margin-top:4px;">Semester I – 2025</div>
+          <div style="margin-top:16px;background:rgba(255,255,255,.2);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;">
+            ⭐ Kategori: SANGAT BAIK
+          </div>
+        </div>
+        <div style="background:#fff;border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow-sm);">
+          <h4 style="font-size:15px;font-weight:700;margin-bottom:16px;color:var(--gray-900);">Rincian Per Unsur Layanan</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;">
+                <span>Kemudahan Prosedur</span><strong style="color:var(--red);">98,2</strong>
+              </div>
+              <div style="background:var(--gray-200);height:8px;border-radius:30px;overflow:hidden;">
+                <div style="height:100%;width:98.2%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:30px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;">
+                <span>Kecepatan Layanan</span><strong style="color:var(--red);">95,8</strong>
+              </div>
+              <div style="background:var(--gray-200);height:8px;border-radius:30px;overflow:hidden;">
+                <div style="height:100%;width:95.8%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:30px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;">
+                <span>Keramahan Petugas</span><strong style="color:var(--red);">97,1</strong>
+              </div>
+              <div style="background:var(--gray-200);height:8px;border-radius:30px;overflow:hidden;">
+                <div style="height:100%;width:97.1%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:30px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;">
+                <span>Kenyamanan Lingkungan</span><strong style="color:var(--red);">94,6</strong>
+              </div>
+              <div style="background:var(--gray-200);height:8px;border-radius:30px;overflow:hidden;">
+                <div style="height:100%;width:94.6%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:30px;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px;">
+                <span>Kepastian Biaya</span><strong style="color:var(--red);">96,5</strong>
+              </div>
+              <div style="background:var(--gray-200);height:8px;border-radius:30px;overflow:hidden;">
+                <div style="height:100%;width:96.5%;background:linear-gradient(90deg,var(--red),var(--orange));border-radius:30px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /.main-content -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card lurah-card">
+      <div class="lurah-photo-wrap">
+        <div class="lurah-photo-bg">
+          <img src="assets/img/lurah.svg" alt="Lurah"/>
+        </div>
+      </div>
+      <div class="lurah-info">
+        <span class="lurah-label">Lurah Kelurahan Petamburan</span>
+        <h3>Rian Hermanu</h3>
+        <div class="lurah-links">
+          <a href="perangkat.html"><i class="fa fa-user"></i> Profil</a>
+          <a href="perangkat.html"><i class="fa fa-history"></i> Riwayat</a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-clock"></i> Jam Pelayanan</div>
+      <div class="jam-table">
+        <div class="jam-row"><span>Senin – Kamis</span><span class="jam-time">08.00 – 16.00</span></div>
+        <div class="jam-row"><span>Jumat</span><span class="jam-time">08.00 – 16.30</span></div>
+        <div class="jam-row weekend"><span>Sabtu – Minggu</span><span class="jam-time closed">Libur</span></div>
+        <div class="jam-note"><i class="fa fa-info-circle"></i> Istirahat: 12.00 – 13.00 WIB</div>
+      </div>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header"><i class="fa fa-phone-alt"></i> Kontak Kami</div>
+      <div class="kontak-list">
+        <a href="tel:02153035403" class="kontak-item"><i class="fa fa-phone"></i><span>(021) 5303540</span></a>
+        <a href="mailto:kel.petamburan@jakarta.go.id" class="kontak-item"><i class="fa fa-envelope"></i><span>kel.petamburan@jakarta.go.id</span></a>
+        <a href="#" class="kontak-item"><i class="fab fa-whatsapp"></i><span>0812-1234-5678 (WA)</span></a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- PPID BANNER -->
+<section class="ppid-banner">
+  <div class="ppid-banner-inner">
+    <div class="ppid-banner-text">
+      <i class="fa fa-shield-alt"></i>
+      <div>
+        <h3>Keterbukaan Informasi Publik (PPID)</h3>
+        <p>Ajukan permohonan informasi atau keberatan secara online</p>
+      </div>
+    </div>
+    <div class="ppid-banner-actions">
+      <a href="ppid.html" class="btn-ppid primary">Form Permohonan</a>
+      <a href="ppid.html" class="btn-ppid secondary">Form Keberatan</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col brand">
+      <div class="footer-brand">
+        <div class="footer-brand-text">
+          <strong>Kelurahan Petamburan</strong>
+          <span>Kecamatan Tanah Abang, Jakarta Pusat</span>
+        </div>
+      </div>
+      <p class="footer-desc">Melayani masyarakat dengan sepenuh hati, transparan, akuntabel, dan berintegritas.</p>
+      <div class="footer-sosmed">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#">Pengantar KTP</a></li>
+        <li><a href="#">Kartu Keluarga</a></li>
+        <li><a href="#">Surat Domisili</a></li>
+        <li><a href="#">SKTM</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="perangkat.html">Perangkat</a></li>
+        <li><a href="informasi.html">Agenda</a></li>
+        <li><a href="ppid.html">PPID</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontak</h4>
+      <div class="footer-kontak">
+        <p><i class="fa fa-map-marker-alt"></i> Jl. KS Tubun No.1, Jakarta Pusat</p>
+        <p><i class="fa fa-phone"></i> (021) 5303540</p>
+        <p><i class="fa fa-envelope"></i> kel.petamburan@jakarta.go.id</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Kelurahan Petamburan – Pemerintah Provinsi DKI Jakarta</span>
+    <span>Dibangun oleh Tim IT Pemprov DKI Jakarta</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
